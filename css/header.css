@@ -1,0 +1,120 @@
+header{
+    width: 100%;
+    height: 100px;
+    margin: 0 auto;
+    background-color: #F4C430;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 50px;
+    padding-right: 50px;
+    z-index: 100;
+}
+
+.logo{
+    width: 6%;
+    border: 5px solid #008000;
+    border-radius: 50%;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 800px;
+    gap: 40px;
+    
+}
+
+nav ul{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    width: 45%;
+    justify-content: center;
+    align-items: center;
+}
+
+
+nav ul li{
+    list-style: none;
+    font-weight: bold;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav ul li img{
+    width: 30%;
+    border: none;
+    border-radius: none;
+}
+
+.contenedor-botones{
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 10px;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+
+nav ul li a:hover{
+    /*color:#0057A0 ;*/
+    color: #007F5F;
+}
+
+
+nav ul li:active{
+    color: blueviolet;
+}
+
+nav ul li:visited{
+    color: #8B0000;
+}
+
+
+.inicio-btn{
+    width: 120px;
+    height: 30px;
+    font-weight: bold;
+    background-color: #FEF4D4;
+    border: 3px solid #ffa500;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.inicio-btn:hover{
+    background-color: #adff2f;
+    border-color: #007F5F;
+    transform: scale(1.1);
+}
+
+.registro-btn{
+    width: 120px;
+    height: 30px;
+    background-color: #8B0000;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+}
+
+
+.registro-btn:hover{
+    background-color:#5f9ea0;
+    transform: scale(1.1);
+
+}
+
+a{
+    text-decoration: none;
+}
