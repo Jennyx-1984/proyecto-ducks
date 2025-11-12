@@ -27,3 +27,7 @@ button{
 main{
     width: 100%;
 }
+
+address {
+  all: unset;
+}
