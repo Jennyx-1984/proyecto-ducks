@@ -1,0 +1,82 @@
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-evenly;
+    font-family: Arial, sans-serif;
+    }
+
+h1 {
+    font-size: 75px;
+    margin: 30px;
+}
+
+.lista {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 100px;
+    row-gap: 50px;
+    margin-right: 10px;
+}
+
+.cuadros{
+    display: flex;
+    border: 2px solid black;
+    font-weight: bold;
+    padding: 5px;
+}
+
+.patitos{
+    height: 200px;
+    margin: 50px;
+
+}
+
+.detailles{
+    margin: 10px;
+}
+
+.stars{
+    height: 30px;
+}
+
+.rol{
+    font-weight: lighter;
+}
+
+.botones{
+    display: flex;
+    gap: 10px;
+
+}
+
+.quantity{
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+    column-gap: -5pcx;
+}
+
+
+
+#black-duck{
+    position: relative;
+    left: 30px;
+}
+
+#mago-duck{
+    height: 250px;
+    position: relative;
+    bottom: 20px;
+}
+
+#blue-duck{
+    height: 180px;
+
+    position: relative;
+    left: 30px;
+}
+
+#hp-duck{
+    position: relative;
+
+}

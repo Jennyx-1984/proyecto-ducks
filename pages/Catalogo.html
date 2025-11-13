@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CATALOGO</title>
-    <link href="../css/reset.css" rel="stylesheet">
+    <!-- <link href="../css/reset.css" rel="stylesheet">-->
     <link href="../css/header.css" rel="stylesheet">
-    <link href="" rel="stylesheet">
+    <link href="../css/catalogo.css" rel="stylesheet">
+    <link href="../css/footer.css"rel="stylesheet" href="">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
  <header>
@@ -24,7 +26,134 @@
     </nav>
  </header>
  <main>
+    <h1>CATÁLOGO</h1>
+
+    <section class="lista">
+
+        <div class="cuadros">
+            <div>
+                <img class=patitos id="black-duck" src="../assets/images/black-duck.jpg">
+            </div>
+            <div class="detailles">
+                <p>Patito Estrella Negro</p>
+                <div>
+                    <img class="stars" src="../assets/images/star.png">
+                    <img class="stars" src="../assets/images/star.png">
+                    <img class="stars" src="../assets/images/star.png">
+                    <img class="stars" src="../assets/images/star.png">
+                    <img class="stars" src="../assets/images/star.png">
+                </div>
+                <p>15€</p>
+                <p class="rol">Para problemas de HTML </p>
+                <div class="botones">
+                    <button>
+                        <a href="pagina de compra" rel="comprar">comprar</a>
+                    </button>
+                    <button class="quantity">
+                        <i class='fas fa-caret-square-up' style='font-size:24px'></i>
+                        <i class='far fa-square' style='font-size:24px'></i>
+                        <i class='fas fa-caret-square-down' style='font-size:24px'></i>
+                    </button>
+            </div>
+            </div>
+        </div>
+        <div class="cuadros">
+            <div>
+                <img class=patitos id="mago-duck" src="../assets/images/magician-magic-duck.jpg">
+            </div>
+                <div class="detailles">
+                <p>Patito Mago</p>
+                <div>
+                    <img class="stars" src="../assets/images/star.png">
+                    <img class="stars" src="../assets/images/star.png">
+                </div>
+                <p>15€</p>
+                <p class="rol">Para problemas de CSS </p>
+            </div>
+        </div>
+        <div class="cuadros">
+            <div>
+                <img class=patitos id="blue-duck" src="../assets/images/blue-magic-duck.jpg">
+            </div>
+            <div class="detailles">
+                <p>Patito Estrella Azul</p>
+                <div>
+                    <img class="stars" src="../assets/images/star.png">
+                    <img class="stars" src="../assets/images/star.png">
+                    <img class="stars" src="../assets/images/star.png">
+                </div>
+                <p>15€</p>
+                <p class="rol">Para problemas de JavaScript </p>
+            </div>
+        </div>
+        <div class="cuadros">
+            <div>
+                <img class=patitos id="hp-duck" src="../assets/images/hp-duck.jpg">
+            </div class="detailles">
+            <div>
+                <p>Patito Harry</p>
+                <div>
+                    <img class="stars" src="../assets/images/star.png">
+                    <img class="stars" src="../assets/images/star.png">
+                    <img class="stars" src="../assets/images/star.png">
+                    <img class="stars" src="../assets/images/star.png">
+                    <img class="stars" src="../assets/images/star.png">
+                </div>
+                <p>15€</p>
+                <p class="rol">Para problemas de Python</p>
+            </div>
+        </div>
+
+    
+    </section>
+
 
  </main>
+
+    <footer>
+      <div class="info-footer">
+        <!--<div class="direcciones">
+          <address class="direccion">
+            c/Patito cuack cuack
+          </address>
+          <address>coding-ducks@fakemail.com</address>
+          <address>Telf: 666 66 66 66</address>
+        </div>
+        <div class="enlaces-politicas">
+          <p>© 2025 - Coding Ducks.</p>
+          <p>Aviso legal</p>
+          <p>Política de privacidad</p>
+          <p>Política de cookies</p>
+        </div>
+      </div> -->
+
+
+      <div class="direcciones">
+        <address class="direccion">c/Patito cuack cuack</address>
+        <p>© 2025 - Coding Ducks.</p>
+      </div>
+
+      <div class="panel2">
+        <p>coding-ducks@fakemail.com</p>
+        <div class="subpanel"><p>Aviso legal</p><p>Política de privacidad</p></div>
+      </div>
+
+
+      <div class="panel3">
+        <p>Telf: 666 66 66 66</p>
+        <p>Política de cookies</p>
+
+
+      </div>
+      <div class="redes-sociales">
+        <a href="#" class="enlace-custom"
+          ><span class="custom">Facebook</span></a
+        >
+        <a href="#" class="enlace-custom"><span class="custom">X</span></a>
+        <a href="#" class="enlace-custom"
+          ><span class="custom">Instagram</span></a
+        >
+      </div>
+    </footer>
  </body>
  </html>

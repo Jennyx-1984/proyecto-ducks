@@ -6,44 +6,62 @@ footer{
     color: white;
     justify-content: space-between;
         position: relative;
+    font-family: Arial, sans-serif;
 
    
 }
 
 .info-footer{
     width: 70%;
+    margin: 20px auto 20px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
     
 }
 
-.direcciones{
+.direcciones,.panel3{
     display: flex;
-    width: 100%;
+    width: 30%;
+    height: 60%;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    
 }
 
-address{
-    text-align: center;
-  margin: 30px auto 30px 50px ;
+.panel2{
+  display: flex;
+    width: 50%;
+    height: 60%;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
 
+
+
+
+
+.subpanel{
+  display: flex;
+  justify-content: center;
+  gap: 100px;
 
 }
 
-.direccion{
-    font-size: 12px;
-}
 
-.enlaces-politicas{
-    display: flex;
-    gap: 120px;
-    width: 100%;
-    justify-content: center;
-}
 
 .redes-sociales{    
     width: 30%;
     display: inline-block;
   position:absolute;
   top:50%;
-  left:95%;
+  left:87%;
   -ms-transform:translate(-50%,-50%);
   -webkit-transform:translate(-50%,-50%);
   transform:translate(-50%,-50%);
