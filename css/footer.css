@@ -2,11 +2,12 @@ footer{
     display: flex;
     background-color: black;
     width: 100%;
-    height: 150px;
+    height: auto;
     color: white;
     justify-content: space-between;
-        position: relative;
-
+    position: relative;
+    align-items: center;
+    
    
 }
 
@@ -17,8 +18,10 @@ footer{
     justify-content: center;
     align-items: center;
     font-weight: bold;
-    font-size: 16px;
     text-align: center;
+    font-size: clamp(14px, 1.2vw, 18px);
+    /*font-size: 16px;*/ 
+
     
 }
 
@@ -49,10 +52,9 @@ footer{
 .subpanel{
   display: flex;
   justify-content: center;
-  gap: 100px;
+  gap: 50px;
 
 }
-
 
 
 .redes-sociales{    
@@ -145,4 +147,102 @@ content:'\e61b';
 }
 .enlace-custom:nth-of-type(3):before {
 content:'\f16d';
+}
+
+
+@media (max-width: 900px) {
+  footer {
+    flex-wrap: wrap;
+    padding: 20px 10px;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .info-footer {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 10px;
+    justify-content: center;
+    text-align: center;
+    font-size: 13px; 
+  }
+
+  .direcciones, .panel2, .panel3 {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+    padding: 8px 0;
+  }
+
+  .panel2 { width: 100%; }
+
+  .subpanel {
+    gap: 20px;
+    border: none; 
+    flex-wrap: nowrap;
+    justify-content: center;
+    font-size: 11.5px;
+    
+  }
+
+  .redes-sociales {
+    position: static; 
+    transform: none;
+    margin: 10px auto 0;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    top: auto;
+    left: auto;
+  }
+}
+
+@media (max-width:775px){
+  .subpanel{
+    font-size: 11.5px;
+    flex-wrap: nowrap;
+    gap:10px;
+    
+  }
+}
+@media (max-width: 480px) {
+  footer {
+    padding: 16px 8px;
+  }
+
+  .info-footer {
+    font-size: clamp(12px, 3.5vw, 16px);
+    margin: 0 8px;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .direcciones, .panel2, .panel3 {
+    gap: 8px;
+    width: 100%;
+    padding: 6px 0;
+  }
+
+  .subpanel {
+    gap: 5px;
+    border: none;
+    width: 100%;
+    flex-direction: column;
+    font-size: 16px;
+  }
+
+  .enlace-custom {
+    width: 36px;
+    height: 36px;
+    padding-top: 10px;
+  }
+
+  .enlace-custom .custom {
+    font-size: 12px;
+    
+  }
+
+
 }

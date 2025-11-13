@@ -26,7 +26,7 @@ property="og:image">
     <header>
       <img src="assets/images/logo-tienda.png" alt="logo coding Ducks" class="logo">
       <nav>
-        <ul>
+        <ul class="menu-iconos">
           <li>
             <img src="assets/images/iconos/inicio.png" alt="icono casita"><a
               href="index.html"
@@ -42,13 +42,27 @@ property="og:image">
               src="assets/images/iconos/dato-de-contacto.png" alt="icono contacto">
               <a href="pages/contacto.html">Contacto</a>
           </li>
+
+
+          
         </ul>
+        <input type="checkbox" id="toggle-menu">
+            <label for="toggle-menu" class="boton-menu"><i class="fa fa-bars fa-3" aria-hidden="true"></i></label>
+          <div class="menu">
+                    <div>INICIO</div>
+                    <div>TIENDA</div>
+                    <div>CONTACTO</div>
+                    <div class="movil">INICIA SESION</div>
+                    <div class="movil">REGISTRO</div>
+                </div> 
+          
         <div class="contenedor-botones">
           <button class="inicio-btn">Inicia sesión</button>
           <button class="registro-btn">Registro</button>
         </div>
       </nav>
     </header>
+    
 
     <main>
       <section class="contenedor-principal">
@@ -69,44 +83,45 @@ property="og:image">
         </div>
 
         <div class="contenedor-texto">
-          <article>
+          <article class="articulo1">
             <h2 class="st-anime-4">Nuestra tienda</h2>
-            <p>
+            <p class="texto-corto1">
               Bienvenido/a a <strong>Coding Ducks</strong>, la tienda donde cada
               bug tiene su patito.
             </p>
-            <p>
+            <input type="checkbox" id="toggle1">
+            <label for="toggle1" class="boton1"></label>
+            <p class="texto-largo1">
               Aquí creemos en el poder del <cite>rubber duck debugging</cite>:
               hablarle a un patito puede ser la mejor manera de entender tu
               propio código.
             </p>
-            <p>
+            <p class="texto-largo1">
               Explora nuestro catálogo y encuentra el compañero de escritorio
               ideal para tus sesiones de programación, tus deploys nocturnos o
               tus cafés con stack traces.
             </p>
           </article>
 
-          <article>
+          <article class="articulo2">
             <h3 class="st-anime-3">¿Qué es el rubber duck debugging?</h3>
-            <p>
+            <p class="texto-corto2">
               El <strong>“rubber duck”</strong> (patito de goma) viene del
               concepto llamado <strong>rubber duck debugging</strong>, una
               técnica de depuración muy conocida entre programadores.
             </p>
-          </article>
+            <input type="checkbox" id="toggle2">
+            <label for="toggle2" class="boton2"></label>
+          
 
-          <article>
-            <h4 class="st-anime-2">En que consiste</h4>
+          <article class="texto-largo2">
+            <h4 class="st-anime-2" >En que consiste</h4>
             <p>
               Cuando un programador tiene un problema en su código y no entiende
-              por qué no funciona, se recomienda
-              <strong
-                >explicarle el problema paso a paso a un patito de goma</strong
-              >
-              (o cualquier objeto inanimado).
+              por qué no funciona, se recomienda<strong>explicarle el problema paso a paso a un 
+              patito de goma</strong>(o cualquier objeto inanimado).
             </p>
-
+            
             <p>
               La idea es que, al tener que
               <strong>explicar el código en voz alta y con detalle</strong>, el
@@ -120,7 +135,7 @@ property="og:image">
             </p>
           </article>
 
-          <article>
+          <article class="texto-largo2">
             <h4 class="st-anime-2">De dónde viene el nombre</h4>
             <p>
               El término se popularizó por el libro
@@ -144,25 +159,13 @@ property="og:image">
               </li>
             </ul>
           </article>
+          </article>
         </div>
       </section>
     </main>
     <footer>
       <div class="info-footer">
-        <!--<div class="direcciones">
-          <address class="direccion">
-            c/Patito cuack cuack
-          </address>
-          <address>coding-ducks@fakemail.com</address>
-          <address>Telf: 666 66 66 66</address>
-        </div>
-        <div class="enlaces-politicas">
-          <p>© 2025 - Coding Ducks.</p>
-          <p>Aviso legal</p>
-          <p>Política de privacidad</p>
-          <p>Política de cookies</p>
-        </div>
-      </div> -->
+        
 
 
 
