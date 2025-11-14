@@ -1,6 +1,6 @@
 header{
     width: 100%;
-    height: 100px;
+    height: auto;
     margin: 0 auto;
     background-color: #F4C430;
     display: flex;
@@ -10,15 +10,55 @@ header{
     align-items: center;
     padding-left: 50px;
     padding-right: 50px;
-    z-index: 100;
+    font-family: 'Encode Sans Expanded',Arial, Helvetica, sans-serif;
+    position: relative;
+    
 }
+.boton-menu{
+    display: none;
+}
+#menu{
+    display: none;
+}
+
+#toggle-menu:checked ~ .menu {
+  display: inline;
+}
+
+.movil{
+    display: none;
+}
+
+#toggle-menu{
+  display: none;
+}
+
+.menu{
+  display: none;
+  width: 200px;
+  height: auto;
+  position: absolute;
+  background-color: aquamarine;
+  border:5px solid black;
+  border-radius: 15px;
+  top: 90px;
+  text-align: center;
+  z-index: 5;
+}
+
+
+
 
 .logo{
-    width: 6%;
+    width: 100px;
     border: 5px solid #008000;
     border-radius: 50%;
+    margin: 10px;
 }
 
+.fa-bars{
+    opacity: 0;
+}
 nav{
     display: flex;
     justify-content: space-between;
@@ -47,12 +87,20 @@ nav ul li{
     align-items: center;
 }
 
-nav ul li img{
-    width: 30%;
-    border: none;
-    border-radius: none;
+
+
+.menu-iconos li:nth-child(1) img{
+    width: 40px;
 }
 
+.menu-iconos li:nth-child(2) img {
+  width: 40px;
+}
+
+
+.menu-iconos li:nth-child(3) img {
+  width: 39.5px;
+}
 .contenedor-botones{
     width: 40%;
     display: flex;
@@ -63,15 +111,17 @@ nav ul li img{
     align-items: center;
 }
 
+nav ul li a{
+    color: black;
+}
 
 nav ul li a:hover{
-    /*color:#0057A0 ;*/
     color: #007F5F;
 }
 
 
-nav ul li:active{
-    color: blueviolet;
+nav ul li a:active{
+    color: #8a2be2;
 }
 
 nav ul li:visited{
@@ -117,4 +167,95 @@ nav ul li:visited{
 
 a{
     text-decoration: none;
+}
+
+
+@media (max-width: 900px) {
+nav{
+    gap: 2%;
+    margin-left: 5%;
+    padding-left: 2%;
+    width: 80%;
+}
+
+nav ul{
+    width: 65%;
+    
+}
+
+.menu-iconos li:nth-child(1) img{
+    width: 40px;
+}
+
+.menu-iconos li:nth-child(2) img {
+  width: 40px;
+}
+
+
+.menu-iconos li:nth-child(3) img {
+  width: 39.5px;
+}
+.contenedor-botones{
+    width: 195px;
+    margin-left: 1%;
+}
+
+.inicio-btn{
+    width:110px ;
+}
+    
+.registro-btn{
+    width: 110px;
+}
+}
+@media (max-width:775px){
+    .fa-bars{
+        opacity: 1;
+    }
+
+    .fa-3{
+        font-size: 3em;
+    }
+
+    nav ul li{
+        display: none;
+        width: 100%;
+        
+    }
+
+    nav{
+        gap: 20px;
+        justify-content: center;
+    }
+
+     .boton-menu{
+        display: inline;
+        background-color: transparent;
+        cursor: pointer;
+
+    }
+   
+
+    
+}
+
+@media (max-width: 480px) {
+    .contenedor-botones{
+        display: none;
+    }
+
+    .boton-menu{
+        display: inline;
+        background-color: transparent;
+        cursor: pointer;
+    }
+    nav{
+        justify-content: flex-end;
+        
+    }
+
+   .movil{
+    display: block;
+   }
+
 }

@@ -1,29 +1,116 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NOMBRE TIENDA</title>
-    <link href="../css/reset.css" rel="stylesheet">
-    <link href="../css/header.css" rel="stylesheet">
-    <link href="" rel="stylesheet">
-</head>
-<body>
- <header>
-    <img src="../assets/images/logo-tienda.png" alt="logo coding Ducks" class="logo">
-    <nav>
-        <ul>
-            <li><img src="../assets/images/iconos/inicio.png" alt="icono casita"><a href="../index.html">Inicio</a></li>
-            <li><img src="../assets/images/iconos/carro.png" alt="icono carro de compra"><a href="../pages/tienda.html">Tienda</a></li>
-            <li><img src="../assets/images/iconos/dato-de-contacto.png" alt="icono contacto"><a href="../pages/contacto.html">Contacto</a></li>
+  <head>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <meta
+  name="description"
+  content="Descubre nuestra tienda de patitos de goma para programadores y descarga tus frustraciones."
+>
+<meta content="coding-ducks.es" property="og:title" >
+<meta content="https://github.com/Jennyx-1984/proyecto-ducks/blob/main/assets/images/logo-tienda.png?raw=true"
+property="og:image">
+<meta property="og:url" content="https://jennyx-1984.github.io/proyecto-ducks/" >
+
+    <title>CODING DUCKS</title>
+    <link href="../css/reset.css" rel="stylesheet" >
+    <link href="../css/header.css" rel="stylesheet" >
+    <link rel="stylesheet" href="../css/footer.css" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/contacto.css">
+    <link rel="stylesheet" href="../css/footer.css">
+  </head>
+  <body>
+    <header>
+      <img src="../assets/images/logo-tienda.png" alt="logo coding Ducks" class="logo">
+      <nav>
+        <ul class="menu-iconos">
+          <li>
+            <img src="../assets/images/iconos/inicio.png" alt="icono casita"><a
+              href="../index.html"
+              >Inicio</a
+            >
+          </li>
+          <li>
+            <img src="../assets/images/iconos/carro.png" alt="icono carro de compra">
+            <a href="tienda.html">Tienda</a>
+          </li>
+          <li>
+            <img
+              src="../assets/images/iconos/dato-de-contacto.png" alt="icono contacto">
+              <a href="#">Contacto</a>
+          </li>
+
+
+          
         </ul>
+        <input type="checkbox" id="toggle-menu">
+            <label for="toggle-menu" class="boton-menu"><i class="fa fa-bars fa-3" aria-hidden="true"></i></label>
+          <div class="menu">
+                    <div>INICIO</div>
+                    <div>TIENDA</div>
+                    <div>CONTACTO</div>
+                    <div>INICIA SESION</div>
+                    <div>REGISTRO</div>
+                </div> 
+          
         <div class="contenedor-botones">
-            <button class="inicio-btn">Inicia sesión</button>
-            <button class="registro-btn">Registro</button>
+          <button class="inicio-btn">Inicia sesión</button>
+          <button class="registro-btn">Registro</button>
         </div>
-    </nav>
- </header>
- <main>
+      </nav>
+    </header>
+ <main class="contacto">
+  <img src="../assets/images/patito-contacto.png" alt="patito mago">
+  
+  <form method="post" action="">
+    <h2>ESCRÍBENOS</h2>
+    <label for="nombre"><span style="color:red;">N</span>OMBRE</label>
+    <input type="text" id="nombre" name="nombre" accesskey="n" tabindex="1" required placeholder="Escribe tu nombre">
+
+    <label for="email"><span style="color:red;">E</span>MAIL</label>
+    <input type="email" id="email" name="email" accesskey="e" tabindex="2" required placeholder="Tu-email@email.com">
+
+
+    <label for="comentario"><span style="color:red;">M</span>ENSAJE</label>
+    <textarea rows="10" cols="50" id="comentario" accesskey="m" tabindex="3" required placeholder="Escribe un comentario"></textarea>
+
+    <button type="submit" class="boton-enviar" tabindex="4">ENVIAR</button>
+  </form>
+
 
  </main>
+ <footer>
+      <div class="info-footer">
+        
+
+
+
+      <div class="direcciones">
+        <address class="direccion">c/Patito cuack cuack</address>
+        <p>© 2025 - Coding Ducks.</p>
+      </div>
+
+      <div class="panel2">
+        <p>coding-ducks@fakemail.com</p>
+        <div class="subpanel"><p>Aviso legal</p><p>Política de privacidad</p></div>
+      </div>
+
+
+      <div class="panel3">
+        <p>Telf: 666 66 66 66</p>
+        <p>Política de cookies</p>
+
+
+      </div>
+      <div class="redes-sociales">
+        <a href="#" class="enlace-custom"
+          ><span class="custom">Facebook</span></a
+        >
+        <a href="#" class="enlace-custom"><span class="custom">X</span></a>
+        <a href="#" class="enlace-custom"
+          ><span class="custom">Instagram</span></a
+        >
+      </div>
+    </footer>
  </body>
