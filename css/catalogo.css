@@ -4,11 +4,13 @@ main {
     align-items: center;
     justify-content:space-evenly;
     font-family: Arial, sans-serif;
-    }
+    } 
 
 h1 {
     font-size: 75px;
-    margin: 30px;
+    position: sticky;
+    align-self: center;
+    justify-self: start; 
 }
 
 .lista {
@@ -29,11 +31,13 @@ h1 {
 .patitos{
     height: 200px;
     margin: 50px;
-
 }
 
 .detailles{
+    display: flex;
+    flex-direction: column;
     margin: 10px;
+    gap: 15px;
 }
 
 .stars{
@@ -85,7 +89,6 @@ h1 {
 
 #blue-duck{
     height: 180px;
-
     position: relative;
     left: 30px;
 }
