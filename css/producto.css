@@ -1,3 +1,25 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body,html {
+    background-color: white;
+    height: 100%;
+    color: #333333;
+    overflow-x: hidden;
+    font-family: 'Encode Sans Expanded',Arial, Helvetica, sans-serif;
+}
+button{
+    background-color:none;
+    border: none;
+}
+main{
+    width: 100%;
+}
+address {
+  all: unset;
+}
 main{
     background-color: white;
 }
@@ -15,7 +37,7 @@ main{
     padding: 10px;
 }
 h2{
-    font-family: sans-serif;
+    font-family: encode sa;
     font-size:40px;
     font-weight: bold;
     letter-spacing: 1.6px;
