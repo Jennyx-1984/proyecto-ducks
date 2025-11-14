@@ -124,7 +124,7 @@ nav ul li a:active{
     color: #8a2be2;
 }
 
-nav ul li:visited{
+nav ul li a:visited{
     color: #8B0000;
 }
 
@@ -257,5 +257,6 @@ nav ul{
    .movil{
     display: block;
    }
+
 
 }
