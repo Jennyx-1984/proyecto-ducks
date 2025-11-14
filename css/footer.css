@@ -7,6 +7,8 @@ footer{
     justify-content: space-between;
     position: relative;
     align-items: center;
+    
+   
 }
 .info-footer{
     width: 70%;
@@ -17,8 +19,11 @@ footer{
     font-weight: bold;
     text-align: center;
     font-size: clamp(14px, 1.2vw, 18px);
-    /*font-size: 16px;*/
+    /*font-size: 16px;*/ 
+
+
 }
+
 .direcciones,.panel3{
     display: flex;
     width: 30%;
@@ -26,7 +31,10 @@ footer{
     flex-direction: column;
     align-items: center;
     gap: 20px;
+
+    
 }
+
 .panel2{
   display: flex;
     width: 50%;
@@ -35,12 +43,20 @@ footer{
     align-items: center;
     gap: 20px;
 }
+
+
+
+
+
 .subpanel{
   display: flex;
   justify-content: center;
   gap: 50px;
+
 }
-.redes-sociales{
+
+
+.redes-sociales{    
     width: 30%;
     display: inline-block;
   position:absolute;
@@ -116,6 +132,8 @@ content:'\e61b';
 .enlace-custom:nth-of-type(3):before {
 content:'\f16d';
 }
+
+
 @media (max-width: 900px) {
   footer {
     flex-wrap: wrap;
@@ -123,14 +141,16 @@ content:'\f16d';
     gap: 20px;
     align-items: flex-start;
   }
+
   .info-footer {
     width: 100%;
     margin: 0 auto;
     padding: 0 10px;
     justify-content: center;
     text-align: center;
-    font-size: 13px;
+    font-size: 13px; 
   }
+
   .direcciones, .panel2, .panel3 {
     width: 100%;
     align-items: center;
@@ -138,16 +158,20 @@ content:'\f16d';
     gap: 12px;
     padding: 8px 0;
   }
+
   .panel2 { width: 100%; }
+
   .subpanel {
     gap: 20px;
-    border: none;
+    border: none; 
     flex-wrap: nowrap;
     justify-content: center;
     font-size: 11.5px;
+    
   }
+
   .redes-sociales {
-    position: static;
+    position: static; 
     transform: none;
     margin: 10px auto 0;
     width: auto;
@@ -158,28 +182,33 @@ content:'\f16d';
     left: auto;
   }
 }
+
 @media (max-width:775px){
   .subpanel{
     font-size: 11.5px;
     flex-wrap: nowrap;
     gap:10px;
+    
   }
 }
 @media (max-width: 480px) {
   footer {
     padding: 16px 8px;
   }
+
   .info-footer {
     font-size: clamp(12px, 3.5vw, 16px);
     margin: 0 8px;
     flex-direction: column;
     gap: 8px;
   }
+
   .direcciones, .panel2, .panel3 {
     gap: 8px;
     width: 100%;
     padding: 6px 0;
   }
+
   .subpanel {
     gap: 5px;
     border: none;
@@ -187,12 +216,17 @@ content:'\f16d';
     flex-direction: column;
     font-size: 16px;
   }
+
   .enlace-custom {
     width: 36px;
     height: 36px;
     padding-top: 10px;
   }
+
   .enlace-custom .custom {
     font-size: 12px;
+    
   }
+
+
 }
