@@ -15,21 +15,34 @@
 
 <body>
     <header>
-        <img src="../assets/images/logo-tienda.png" alt="logo coding Ducks" class="logo">
-        <nav>
-            <ul>
-                <li><img src="../assets/images/iconos/inicio.png" alt="icono casita"><a href="../index.html">Inicio</a>
+      <img src="../assets/images/logo-tienda.png" alt="logo coding Ducks" class="logo">
+      <nav>
+        <ul class="menu-iconos">
+          <li><img src="../assets/images/iconos/inicio.png" alt="icono casita"><a href="../index.html">Inicio</a>
                 </li>
                 <li><img src="../assets/images/iconos/carro.png" alt="icono carro de compra"><a
                         href="Catalogo.html">Tienda</a></li>
                 <li><img src="../assets/images/iconos/dato-de-contacto.png" alt="icono contacto"><a
                         href="contacto.html">Contacto</a></li>
-            </ul>
-            <div class="contenedor-botones">
-                <button class="inicio-btn">Inicia sesión</button>
-                <button class="registro-btn">Registro</button>
-            </div>
-        </nav>
+
+
+          
+        </ul>
+        <input type="checkbox" id="toggle-menu">
+            <label for="toggle-menu" class="boton-menu"><i class="fa fa-bars fa-3" aria-hidden="true"></i></label>
+          <div class="menu">
+                    <div><a href="../index.html">INICIO</a></div>
+                    <div><a href="Catalogo.html">TIENDA</a></div>
+                    <div><a href="contacto.html">CONTACTO</a></div>
+                    <div class="movil">INICIA SESION</div>
+                    <div class="movil">REGISTRO</div>
+                </div> 
+          
+        <div class="contenedor-botones">
+          <button class="inicio-btn">Inicia sesión</button>
+          <button class="registro-btn">Registro</button>
+        </div>
+      </nav>
     </header>
     <main>
         <div class="madre">
@@ -93,3 +106,4 @@
     </footer>
 
 </body>
+
