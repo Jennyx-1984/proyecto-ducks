@@ -1,29 +1,94 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NOMBRE TIENDA</title>
+    <title>Productos</title>
     <link href="../css/reset.css" rel="stylesheet">
-    <link href="../css/header.css" rel="stylesheet">
-    <link href="" rel="stylesheet">
+    <link href="../css/header.css" rel="stylesheet">git
+    <link href="../css/footer.css" rel="stylesheet">
+    <link href="../css/producto.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@100;200;300;400;500;600;700;800;900&family=Luckiest+Guy&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pacifico&family=Playwrite+NL+Guides&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 </head>
-<body>
- <header>
-    <img src="../assets/images/logo-tienda.png" alt="logo coding Ducks" class="logo">
-    <nav>
-        <ul>
-            <li><img src="../assets/images/iconos/inicio.png" alt="icono casita"><a href="../index.html">Inicio</a></li>
-            <li><img src="../assets/images/iconos/carro.png" alt="icono carro de compra"><a href="pages/tienda.html">Tienda</a></li>
-            <li><img src="../assets/images/iconos/dato-de-contacto.png" alt="icono contacto"><a href="pages/contacto.html">Contacto</a></li>
-        </ul>
-        <div class="contenedor-botones">
-            <button class="inicio-btn">Inicia sesión</button>
-            <button class="registro-btn">Registro</button>
-        </div>
-    </nav>
- </header>
- <main>
 
- </main>
- </body>
+<body>
+    <header>
+        <img src="../assets/images/logo-tienda.png" alt="logo coding Ducks" class="logo">
+        <nav>
+            <ul>
+                <li><img src="../assets/images/iconos/inicio.png" alt="icono casita"><a href="../index.html">Inicio</a>
+                </li>
+                <li><img src="../assets/images/iconos/carro.png" alt="icono carro de compra"><a
+                        href="pages/tienda.html">Tienda</a></li>
+                <li><img src="../assets/images/iconos/dato-de-contacto.png" alt="icono contacto"><a
+                        href="pages/contacto.html">Contacto</a></li>
+            </ul>
+            <div class="contenedor-botones">
+                <button class="inicio-btn">Inicia sesión</button>
+                <button class="registro-btn">Registro</button>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="madre">
+            <section class="seccionimagen">
+                <div>
+                    <img alt="Patito Estrella Negro" class="patitoestrellanegro" src="../assets/images/black_duck.jpg">
+                </div>
+            </section>
+            <section class="secciontexto">
+                <h2>Patito-Estrella Negro</h2>
+                <div class="puntuacion-stock">
+                    <img alt="Estrellitas puntuación" class="estrellitas4" src="../assets/images/estrellitas4.PNG">
+                    <p id="reviews"><a href="">Ver reviews</a></p>
+                    <p id="stock26">Stock: 26</p>
+                </div>
+                <div class="precio">
+                    <p>15€</p>
+                </div>
+                <div class="parrafos">
+                    <p class="p1">Conocido como el Patito Estelar, no solo flota, sino que se desliza silenciosamente,
+                        como siguiendo corrientes invisibles de energía cósmica. Te ayudara a resolver cualquier duda
+                        sobre HTML.</p>
+                    <p class="p2">Ya sea un juguete mágico del cosmos o un pequeño guardián de la paz nocturna, el
+                        patito de goma negro con estrellas plateadas sigue siendo una pequeña y misteriosa pieza del
+                        universo: silencioso, constante y siempre vigilante del cielo.</p>
+                </div>
+                <div class="seccioncomprar">
+                    <button class="botoncomprar"><b>Comprar</b></button>
+                    <div class="triple-boton">
+                        <button class="botonmenos">-</button>
+                        <div class="campo-vacio">1</div>
+                        <button class="botonmas">+</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer>
+      <div class="info-footer">
+      <div class="direcciones">
+        <address class="direccion">c/Patito cuack cuack</address>
+        <p>© 2025 - Coding Ducks.</p>
+      </div>
+      <div class="panel2">
+        <p>coding-ducks@fakemail.com</p>
+        <div class="subpanel"><p>Aviso legal</p><p>Política de privacidad</p></div>
+      </div>
+      <div class="panel3">
+        <p>Telf: 666 66 66 66</p>
+        <p>Política de cookies</p>
+      </div>
+      <div class="redes-sociales">
+        <a href="#" class="enlace-custom"
+          ><span class="custom">Facebook</span></a
+        >
+        <a href="#" class="enlace-custom"><span class="custom">X</span></a>
+        <a href="#" class="enlace-custom"
+          ><span class="custom">Instagram</span></a
+        >
+      </div>
+    </footer>
+</body>
