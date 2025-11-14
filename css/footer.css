@@ -10,7 +10,6 @@ footer{
     
    
 }
-
 .info-footer{
     width: 70%;
     margin: 20px auto 20px 50px;
@@ -22,7 +21,7 @@ footer{
     font-size: clamp(14px, 1.2vw, 18px);
     /*font-size: 16px;*/ 
 
-    
+
 }
 
 .direcciones,.panel3{
@@ -66,10 +65,7 @@ footer{
   -ms-transform:translate(-50%,-50%);
   -webkit-transform:translate(-50%,-50%);
   transform:translate(-50%,-50%);
-
 }
-
-
 .enlace-custom {
   color:#fff;
   background: #DB6E82;
@@ -89,13 +85,9 @@ footer{
   transition: all .5s;
    -webkit-font-smoothing: antialiased;
 }
-
 .enlace-custom:hover {
-  background: #ef92a3;
+  background: #EF92A3;
 }
-
-
-
 .enlace-custom .custom {
   color:#666;
   position:absolute;
@@ -115,13 +107,10 @@ footer{
   -moz-transition: all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   transition: all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
-
-
-
 .enlace-custom .custom:before {
   content:'';
-  width: 0; 
-  height: 0; 
+  width: 0;
+  height: 0;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
   border-top: 5px solid #fff;
@@ -129,16 +118,11 @@ footer{
   bottom:-5px;
   left:40px;
 }
-
-
-
 .enlace-custom:hover .custom {
   bottom:50px;
   visibility:visible;
   opacity:1;
 }
-
-
 .enlace-custom:nth-of-type(1):before {
 content:'\f09a';
 }
