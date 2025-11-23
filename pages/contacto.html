@@ -19,6 +19,8 @@ property="og:image">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="../css/contacto.css">
     <link rel="stylesheet" href="../css/footer.css">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Encode+Sans+Expanded:wght@100;200;300;400;500;600;700;800;900&family=Luckiest+Guy&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pacifico&family=Playwrite+NL+Guides&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/boton-cart.css">
   </head>
   <body>
     <header>
@@ -40,14 +42,10 @@ property="og:image">
               src="../assets/images/iconos/dato-de-contacto.png" alt="icono contacto">
               <a href="#">Contacto</a>
           </li>
-
-
-          
         </ul>
-        <input type="checkbox" id="toggle-menu">
-            <label for="toggle-menu" class="boton-menu"><i class="fa fa-bars fa-3" aria-hidden="true"></i></label>
+        <button class="boton-menu"><i class="fa fa-bars fa-3" aria-hidden="true"></i></button>
           <div class="menu">
-                    <div><a href="../inicio.html">INICIO</a></div>
+                    <div><a href="../index.html">INICIO</a></div>
                     <div><a href="Catalogo.html">TIENDA</a></div>
                     <div><a href="#">CONTACTO</a></div>
                     <div>INICIA SESION</div>
@@ -63,56 +61,51 @@ property="og:image">
  <main class="contacto">
   <img src="../assets/images/patito-contacto.png" alt="patito mago">
   
-  <form method="post" action="">
+  <form method="post" id="contacto">
     <h2>ESCRÍBENOS</h2>
-    <label for="nombre"><span style="color:red;">N</span>OMBRE</label>
-    <input type="text" id="nombre" name="nombre" accesskey="n" tabindex="1" required placeholder="Escribe tu nombre">
+    <div class="campo">
+    <label for="nombre"><span style="color:red;">N</span>OMBRE*</label>
+    <input type="text" id="nombre" name="nombre" accesskey="n" tabindex="1" placeholder="Escribe tu nombre" aria-required="true">
+    <span id="error-nombre" aria-live="polite">ERROR</span>
+    </div>
 
-    <label for="email"><span style="color:red;">E</span>MAIL</label>
-    <input type="email" id="email" name="email" accesskey="e" tabindex="2" required placeholder="Tu-email@email.com">
 
+    <div class="campo">
+    <label for="email"><span style="color:red;">E</span>MAIL*</label>
+    <input type="email" id="email" name="email" accesskey="e" tabindex="2" placeholder="Tu-email@email.com" aria-required="true">
+    <span id="error-email" aria-live="polite">ERROR</span>
+  </div>
+    
+     <div class="campo">
+    <label for="comentario"><span style="color:red;">M</span>ENSAJE*</label>
+    <textarea rows="10" cols="50" id="comentario" accesskey="m" tabindex="3" placeholder="Escribe un comentario" aria-required="true"></textarea>
+  <span id="error-comentario" aria-live="polite">ERROR</span>
+  </div>
 
-    <label for="comentario"><span style="color:red;">M</span>ENSAJE</label>
-    <textarea rows="10" cols="50" id="comentario" accesskey="m" tabindex="3" required placeholder="Escribe un comentario"></textarea>
-
-    <button type="submit" class="boton-enviar" tabindex="4">ENVIAR</button>
+    <button type="submit" class="boton-enviar" tabindex="4" >ENVIAR</button>
   </form>
 
 
  </main>
  <footer>
+      <div class="footer-container">
       <div class="info-footer">
-        
-
-
-
-      <div class="direcciones">
         <address class="direccion">c/Patito cuack cuack</address>
-        <p>© 2025 - Coding Ducks.</p>
-      </div>
-
-      <div class="panel2">
-        <p>coding-ducks@fakemail.com</p>
-        <div class="subpanel"><p>Aviso legal</p><p>Política de privacidad</p></div>
-      </div>
-
-
-      <div class="panel3">
+        <p class="email-footer">coding-ducks@fakemail.com</p>
         <p>Telf: 666 66 66 66</p>
+        <p class="registrado">© 2025 - Coding Ducks.</p>
+        <p>Aviso legal</p>
+        <p>Política de privacidad</p>
         <p>Política de cookies</p>
-
-
       </div>
       <div class="redes-sociales">
-        <a href="#" class="enlace-custom"
-          ><span class="custom">Facebook</span></a
-        >
+        <a href="#" class="enlace-custom"><span class="custom">Facebook</span></a>
         <a href="#" class="enlace-custom"><span class="custom">X</span></a>
-        <a href="#" class="enlace-custom"
-          ><span class="custom">Instagram</span></a
-        >
+        <a href="#" class="enlace-custom"><span class="custom">Instagram</span></a>
       </div>
+      
     </footer>
-
+<script src="../js/contacto.js"></script>
+<script src="../js/events/events.js" type="module"></script>
  </body>
-
+</html>

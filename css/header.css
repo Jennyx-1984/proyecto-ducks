@@ -11,18 +11,11 @@ header{
     padding-left: 50px;
     padding-right: 50px;
     font-family: 'Encode Sans Expanded',Arial, Helvetica, sans-serif;
-    position: relative;
-    
-}
-.boton-menu{
-    display: none;
-}
-#menu{
-    display: none;
+    position: relative;  
 }
 
-#toggle-menu:checked ~ .menu {
-  display: inline;
+.boton-menu{
+    display: none;
 }
 
 .movil{
@@ -38,16 +31,13 @@ header{
   width: 200px;
   height: auto;
   position: absolute;
-  background-color: aquamarine;
+  background-color: #eee1bb;
   border:5px solid black;
   border-radius: 15px;
   top: 90px;
   text-align: center;
   z-index: 5;
 }
-
-
-
 
 .logo{
     width: 100px;
@@ -59,13 +49,13 @@ header{
 .fa-bars{
     opacity: 0;
 }
+
 nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 800px;
-    gap: 40px;
-    
+    gap: 40px;    
 }
 
 nav ul{
@@ -87,8 +77,6 @@ nav ul li{
     align-items: center;
 }
 
-
-
 .menu-iconos li:nth-child(1) img{
     width: 40px;
 }
@@ -101,6 +89,7 @@ nav ul li{
 .menu-iconos li:nth-child(3) img {
   width: 39.5px;
 }
+
 .contenedor-botones{
     width: 40%;
     display: flex;
@@ -111,23 +100,21 @@ nav ul li{
     align-items: center;
 }
 
-nav ul li a{
+nav ul li a:link{
     color: black;
+}
+
+nav ul li a:visited{
+    color: #8B0000;
 }
 
 nav ul li a:hover{
     color: #007F5F;
 }
 
-
 nav ul li a:active{
     color: #8a2be2;
 }
-
-nav ul li:visited{
-    color: #8B0000;
-}
-
 
 .inicio-btn{
     width: 120px;
@@ -154,21 +141,18 @@ nav ul li:visited{
     color: white;
     cursor: pointer;
     transition: transform 0.5s ease;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;    
 }
 
 
 .registro-btn:hover{
     background-color:#5f9ea0;
     transform: scale(1.1);
-
 }
 
 a{
     text-decoration: none;
 }
-
 
 @media (max-width: 900px) {
 nav{
@@ -179,8 +163,7 @@ nav{
 }
 
 nav ul{
-    width: 65%;
-    
+    width: 65%;    
 }
 
 .menu-iconos li:nth-child(1) img{
@@ -195,6 +178,7 @@ nav ul{
 .menu-iconos li:nth-child(3) img {
   width: 39.5px;
 }
+
 .contenedor-botones{
     width: 195px;
     margin-left: 1%;
@@ -208,54 +192,49 @@ nav ul{
     width: 110px;
 }
 }
+
 @media (max-width:775px){
-    .fa-bars{
-        opacity: 1;
-    }
+.fa-bars{
+    opacity: 1;
+}
 
-    .fa-3{
-        font-size: 3em;
-    }
+.fa-3{
+    font-size: 3em;
+}
 
-    nav ul li{
-        display: none;
-        width: 100%;
-        
-    }
+nav ul li{
+    display: none;
+    width: 100%;    
+}
 
-    nav{
-        gap: 20px;
-        justify-content: center;
-    }
+nav{
+    gap: 20px;
+    justify-content: center;
+}
 
-     .boton-menu{
-        display: inline;
-        background-color: transparent;
-        cursor: pointer;
-
-    }
-   
-
-    
+.boton-menu{
+    display: inline;
+    background-color: transparent;
+    cursor: pointer;
+}   
 }
 
 @media (max-width: 480px) {
-    .contenedor-botones{
-        display: none;
-    }
+.contenedor-botones{
+    display: none;
+}
 
-    .boton-menu{
-        display: inline;
-        background-color: transparent;
-        cursor: pointer;
-    }
-    nav{
-        justify-content: flex-end;
-        
-    }
+.boton-menu{
+    display: inline;
+    background-color: transparent;
+    cursor: pointer;
+}
 
-   .movil{
+nav{
+    justify-content: flex-end;    
+}
+
+.movil{
     display: block;
-   }
-
+}
 }
