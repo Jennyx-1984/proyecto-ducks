@@ -11,6 +11,7 @@
     <link href="../css/producto.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@100;200;300;400;500;600;700;800;900&family=Luckiest+Guy&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pacifico&family=Playwrite+NL+Guides&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/boton-cart.css">
 </head>
 
 <body>
@@ -28,8 +29,7 @@
 
           
         </ul>
-        <input type="checkbox" id="toggle-menu">
-            <label for="toggle-menu" class="boton-menu"><i class="fa fa-bars fa-3" aria-hidden="true"></i></label>
+       <button class="boton-menu"><i class="fa fa-bars fa-3" aria-hidden="true"></i></button>
           <div class="menu">
                     <div><a href="../index.html">INICIO</a></div>
                     <div><a href="Catalogo.html">TIENDA</a></div>
@@ -70,7 +70,7 @@
                         universo: silencioso, constante y siempre vigilante del cielo.</p>
                 </div>
                 <div class="seccioncomprar">
-                    <button class="botoncomprar"><b>Comprar</b></button>
+                    <button class="botoncomprar" onclick="addToCart()"><b>Comprar</b></button>
                     <div class="triple-boton">
                         <button class="botonmenos">-</button>
                         <div class="campo-vacio">1</div>
@@ -81,30 +81,24 @@
         </div>
     </main>
     <footer>
+      <div class="footer-container">
       <div class="info-footer">
-      <div class="direcciones">
         <address class="direccion">c/Patito cuack cuack</address>
-        <p>© 2025 - Coding Ducks.</p>
-      </div>
-      <div class="panel2">
-        <p>coding-ducks@fakemail.com</p>
-        <div class="subpanel"><p>Aviso legal</p><p>Política de privacidad</p></div>
-      </div>
-      <div class="panel3">
+        <p class="email-footer">coding-ducks@fakemail.com</p>
         <p>Telf: 666 66 66 66</p>
+        <p class="registrado">© 2025 - Coding Ducks.</p>
+        <p>Aviso legal</p>
+        <p>Política de privacidad</p>
         <p>Política de cookies</p>
       </div>
       <div class="redes-sociales">
-        <a href="#" class="enlace-custom"
-          ><span class="custom">Facebook</span></a
-        >
+        <a href="#" class="enlace-custom"><span class="custom">Facebook</span></a>
         <a href="#" class="enlace-custom"><span class="custom">X</span></a>
-        <a href="#" class="enlace-custom"
-          ><span class="custom">Instagram</span></a
-        >
+        <a href="#" class="enlace-custom"><span class="custom">Instagram</span></a>
       </div>
+      
     </footer>
-
+    <script src="../js/events/events.js" type="module"></script>
 </body>
 
 
