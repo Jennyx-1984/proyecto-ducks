@@ -1,4 +1,4 @@
-let listaPatitos = [
+export let listaPatitos = [
     {nombre: "Patito Estrella Negro",
      estrellas: 5, 
      precio: 15, 
