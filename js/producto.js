@@ -1,4 +1,4 @@
-import {listaPatitos} from './catalogo.js';
+//import {listaPatitos} from './catalogo.js';
 const duckTitle = document.getElementById('duckTitle');
 const duckPrice = document.getElementById('duckPrice');
 const duckImage = document.getElementById('duckImage');
@@ -28,7 +28,7 @@ const duckInfo = function(patito){
         precio: 0,
         moneda: "€",
         rol: "No disponible",
-        image: "../assets/images/black_duck.jpg",
+        image: "../assets/images/patitopatoso.png",
         description: "patopatoso",
         stock: 0
     }
