@@ -13,14 +13,15 @@ property="og:image">
 <meta property="og:url" content="https://jennyx-1984.github.io/proyecto-ducks/" >
 
     <title>CODING DUCKS</title>
+    <link href="css/loading.css" rel="stylesheet">
     <link href="css/reset.css" rel="stylesheet" >
     <link href="css/header.css" rel="stylesheet" >
     <link href="css/index.css" rel="stylesheet" >
     <link rel="stylesheet" href="css/footer.css" >
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Encode+Sans+Expanded:wght@100;200;300;400;500;600;700;800;900&family=Luckiest+Guy&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pacifico&family=Playwrite+NL+Guides&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/boton-cart.css">
   </head>
   <body>
     <header>
@@ -35,27 +36,22 @@ property="og:image">
           </li>
           <li>
             <img src="assets/images/iconos/carro.png" alt="icono carro de compra">
-            <a href="pages/tienda.html">Tienda</a>
+            <a href="pages/Catalogo.html">Tienda</a>
           </li>
           <li>
             <img
               src="assets/images/iconos/dato-de-contacto.png" alt="icono contacto">
               <a href="pages/contacto.html">Contacto</a>
           </li>
-
-
-          
         </ul>
-        <input type="checkbox" id="toggle-menu">
-            <label for="toggle-menu" class="boton-menu"><i class="fa fa-bars fa-3" aria-hidden="true"></i></label>
+          <button class="boton-menu"><i class="fa fa-bars fa-3" aria-hidden="true"></i></button>  
           <div class="menu">
                     <div><a href="index.html">INICIO</a></div>
-                    <div>TIENDA</div>
-                    <div>CONTACTO</div>
+                    <div><a href="pages/Catalogo.html">TIENDA</a></div>
+                    <div><a href="pages/contacto.html">CONTACTO</a></div>
                     <div class="movil">INICIA SESION</div>
                     <div class="movil">REGISTRO</div>
                 </div> 
-          
         <div class="contenedor-botones">
           <button class="inicio-btn">Inicia sesión</button>
           <button class="registro-btn">Registro</button>
@@ -64,7 +60,9 @@ property="og:image">
     </header>
     
 
+  </div>
     <main>
+      
       <section class="contenedor-principal">
         <div class="titlewrapper">
           <h1 class="design">BIENVENID@ A NUESTRA TIENDA DE PATITOS DE GOMA</h1>
@@ -163,38 +161,26 @@ property="og:image">
         </div>
       </section>
     </main>
+    </div>
     <footer>
+      <div class="footer-container">
       <div class="info-footer">
-        
-
-
-
-      <div class="direcciones">
         <address class="direccion">c/Patito cuack cuack</address>
-        <p>© 2025 - Coding Ducks.</p>
-      </div>
-
-      <div class="panel2">
-        <p>coding-ducks@fakemail.com</p>
-        <div class="subpanel"><p>Aviso legal</p><p>Política de privacidad</p></div>
-      </div>
-
-
-      <div class="panel3">
+        <p class="email-footer">coding-ducks@fakemail.com</p>
         <p>Telf: 666 66 66 66</p>
+        <p class="registrado">© 2025 - Coding Ducks.</p>
+        <p>Aviso legal</p>
+        <p>Política de privacidad</p>
         <p>Política de cookies</p>
-
-
       </div>
       <div class="redes-sociales">
-        <a href="#" class="enlace-custom"
-          ><span class="custom">Facebook</span></a
-        >
+        <a href="#" class="enlace-custom"><span class="custom">Facebook</span></a>
         <a href="#" class="enlace-custom"><span class="custom">X</span></a>
-        <a href="#" class="enlace-custom"
-          ><span class="custom">Instagram</span></a
-        >
+        <a href="#" class="enlace-custom"><span class="custom">Instagram</span></a>
       </div>
+      
     </footer>
+    <script src="js/events/events.js" type="module"></script>
   </body>
 </html>
+

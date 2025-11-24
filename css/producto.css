@@ -1,0 +1,120 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body,html {
+    background-color: white;
+    height: 100%;
+    color: #333333;
+    overflow-x: hidden;
+    font-family: 'Encode Sans Expanded',Arial, Helvetica, sans-serif;
+}
+button{
+    background-color:none;
+    border: none;
+}
+main{
+    width: 100%;
+}
+address {
+  all: unset;
+}
+main{
+    background-color: white;
+}
+.madre{  
+    display: flex;
+    padding: 40px;
+}
+.seccionimagen{
+    margin:15px;
+    margin-right: 60px;
+}
+
+.secciontexto{
+    margin: 20px;
+    padding: 10px;
+}
+h2{
+    font-size:40px;
+    font-weight: bold;
+    letter-spacing: 1.6px;
+}
+.puntuacion-stock {
+    display: flex; 
+    gap: 40px; 
+    align-content: center; 
+}
+.estrellitas4{
+    height: 40px;
+}
+#stock26 {
+    position: relative;
+    align-content: center;
+    color:#008214;
+    font-weight: bold;
+    font-size: 16px;
+    left: 50px;
+}
+#reviews {
+    position: relative;
+    right: 20px;
+    bottom: 5px;
+    align-content:end;
+    font-size: 12px;
+}
+.precio {
+    font-size: 25px;
+    font-weight: bold;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.parrafos{
+    margin-right: 30px;
+    padding-right: 100px;
+    padding-bottom: 40px;
+}
+.p1{
+    padding-bottom: 20px;
+}
+.seccioncomprar {
+    display: flex;
+    margin-left: 20px;
+}
+.botoncomprar{
+    border:2px solid #ffa600;
+    background-color: #fff5d4;
+    width: 100px;
+    height: 30px;
+    font-weight: bold;
+    margin-right: 30px;
+    font-size: 14px;
+}
+.triple-boton {
+    display: flex; 
+}
+.botonmenos{
+    width: 30px;
+    height: 30px;
+    background-color: #6b6b6b;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+.campo-vacio{
+    border: 1px solid gray;
+    width: 40px;
+    height: 30px;
+    text-align: center;
+    color: gray;
+    align-content: center;
+}
+.botonmas{
+    width:30px;
+    height: 30px;
+    background-color: #6b6b6b;
+    color:white;
+    font-size: 20px;
+    font-weight: bold;
+}
