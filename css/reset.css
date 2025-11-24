@@ -7,13 +7,16 @@
 
 body,html {
     background-color: white;
-    height: 100%;
     color: #333333;
     overflow-x: hidden;
     font-family: 'Encode Sans Expanded',Arial, Helvetica, sans-serif;
+    height: 100%;
 }
 
-
+body{
+    display: flex;
+    flex-direction: column; 
+}
 button{
     background-color:none;
     border: none;
@@ -22,8 +25,13 @@ button{
 
 main{
     width: 100%;
+    flex: 1;
 }
 
 address {
   all: unset;
+}
+
+footer{
+    margin-top: auto;
 }
