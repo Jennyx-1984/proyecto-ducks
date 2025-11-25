@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (btn) {
       e.preventDefault();
       addToCart(2); // suma 2 unidades, utilizado como testeo
+      //deberia leer la cantidad que hay en contador
     }
   });
 

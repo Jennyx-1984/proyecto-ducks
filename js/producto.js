@@ -6,7 +6,6 @@ const duckTitle = document.getElementById('duckTitle');
 const duckPrice = document.getElementById('duckPrice');
 const duckImage = document.getElementById('duckImage');
 const duckDescription = document.getElementById('duckDescription');
-const ratingStars = document.getElementById('ratingStars'); 
 const duckStock = document.getElementById('stock');
 const duckRol = document.getElementById('duckRol');
 
@@ -48,3 +47,7 @@ parent.prepend(listEstrellas);
 duckRol.textContent = duck.rol;
 duckDescription.textContent = duck.historia;
 duckStock.textContent = `Stock: ${duck.stock}`;
+/*
+let contador= getElementById("contador").textContent;
+const compra= document.getElementById("compra");
+compra.addEventListener("click", () => {*/
