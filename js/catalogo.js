@@ -31,10 +31,18 @@ listaPatitos.forEach(patito => {
     newRol.textContent = patito.rol;
     let buttonCompra = document.createElement("button");
     buttonCompra.classList.add("boton-compra");
-    buttonCompra.textContent = "Comprar"
-    buttonCompra.click(function(){
-    window.location.href = `producto.html?id=${productoId}`;
-    })
+    buttonCompra.textContent = "Comprar";
+
+    //buttonCompra.setAttribute("click", ()=> {window.location.href= `producto.html?id=${productoId}`; });
+   
+    //buttonCompra.click(function(){
+    //    window.location.href= `producto.html?id=${productoId}`
+    //});
+
+    function clickToCompra(){
+        window.location.href= `producto.html?id=${patito.id}`;
+    };
+    buttonCompra.addEventListener("click", clickToCompra);
 
     parent.appendChild(newFrame);
     newFrame.appendChild(newPhoto);
