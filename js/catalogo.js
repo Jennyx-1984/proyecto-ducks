@@ -29,6 +29,12 @@ listaPatitos.forEach(patito => {
     let newRol = document.createElement("p");
     newRol.classList.add("rol");
     newRol.textContent = patito.rol;
+    let buttonCompra = document.createElement("button");
+    buttonCompra.classList.add("boton-compra");
+    buttonCompra.textContent = "Comprar"
+    buttonCompra.click(function(){
+    window.location.href = `producto.html?id=${productoId}`;
+    })
 
     parent.appendChild(newFrame);
     newFrame.appendChild(newPhoto);
@@ -37,11 +43,9 @@ listaPatitos.forEach(patito => {
     newDetails.appendChild(listEstrellas);
     newDetails.appendChild(newPrecio);
     newDetails.appendChild(newRol);
+    newDetails.appendChild(buttonCompra);
    
-
-
-
-
     })
+
 
 
