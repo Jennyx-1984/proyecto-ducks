@@ -23,14 +23,14 @@ const duckInfo = function(patito){
         return patito;
         }else{
          let lostPatito = {
+        photo: "../assets/images/patitopatoso.png",
         nombre: "Patito Perdido",
         estrellas: 0,
         precio: 0,
         moneda: "€",
         rol: "No disponible",
-        image: "../assets/images/patitopatoso.png",
-        description: "patopatoso",
-        stock: 0
+        stock: 0,
+        historia: "Lo sentimos, el patito que buscas no se encuentra en nuestro catálogo. Por favor, regresa a la página principal para explorar nuestros productos disponibles."
     }
     return lostPatito;
 }
