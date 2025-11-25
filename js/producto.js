@@ -28,12 +28,23 @@ const possibleDuck = listaPatitos.find((patito) => {
 
 const duck = possibleDuck ? possibleDuck : lostPatito;
 
+let parent =document.querySelector(".puntuacion-stock");
+let listEstrellas = document.createElement("div");
+    listEstrellas.classList.add("estrellas");
+
+for (let i = 1; i <= duck.estrellas; i++) {
+        let newEstrellas = document.createElement("img");
+        newEstrellas.classList.add("stars");
+        newEstrellas.src = "../assets/images/star.png";
+        newEstrellas.alt = duck.estrellas + " estrellas";
+        listEstrellas.appendChild(newEstrellas);
+    };
+
 duckTitle.textContent = duck.nombre;
 duckPrice.textContent = duck.precio + duck.moneda;
 duckImage.src = duck.photo;
 duckImage.alt = "imagen de "+ duck.nombre;
+parent.prepend(listEstrellas);
 duckRol.textContent = duck.rol;
 duckDescription.textContent = duck.historia;
-ratingStars.src = `../assets/images/estrellitas ${duck.estrellas}.PNG`;
-ratingStars.alt = `Imagen de ${duck.estrellas} estrellas`;
 duckStock.textContent = `Stock: ${duck.stock}`;
