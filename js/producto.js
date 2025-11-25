@@ -47,3 +47,7 @@ parent.prepend(listEstrellas);
 duckRol.textContent = duck.rol;
 duckDescription.textContent = duck.historia;
 duckStock.textContent = `Stock: ${duck.stock}`;
+/*
+let contador= getElementById("contador").textContent;
+const compra= document.getElementById("compra");
+compra.addEventListener("click", () => {*/
