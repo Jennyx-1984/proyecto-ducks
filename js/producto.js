@@ -1,5 +1,4 @@
 import {listaPatitos} from '../js/lista-patitos.js';
-import { addToCart } from './boton-cart.js';
 const urlParams = new URLSearchParams(window.location.search);
 
 const duckId = parseInt(urlParams.get('id'));
@@ -8,24 +7,10 @@ const duckPrice = document.getElementById('duckPrice');
 const duckImage = document.getElementById('duckImage');
 const duckDescription = document.getElementById('duckDescription');
 const duckStock = document.getElementById('stock');
-let listaPatitos = [{}];
-let patito = 
-    {nombre: "Patito 1",
-     estrellas: 5, 
-     precio: 15, 
-     moneda: "€",
-     rol: "Para problemas de HTML",
-     image: "../assets/images/black_duck.jpg",
-    description:"patopatoso",
-    stock: 26};
+const duckRol = document.getElementById('duckRol');
 
-
-const duckInfo = function(patito){
-    for (let id of listaPatitos){
-    if (id.nombre == patito.nombre){
-        return patito;
-        }else{
-         let lostPatito = {
+const lostPatito = {
+        photo: "../assets/images/patitopatoso.png",
         nombre: "Patito Perdido",
         estrellas: 0,
         precio: 0,
@@ -61,3 +46,35 @@ parent.prepend(listEstrellas);
 duckRol.textContent = duck.rol;
 duckDescription.textContent = duck.historia;
 duckStock.textContent = `Stock: ${duck.stock}`;
+
+
+//añadido
+
+// Obtener elementos
+const botonComprar = document.getElementById("compra");
+const amount = document.getElementById("contador");
+
+
+botonComprar.addEventListener("click", () => {
+
+    const cantidad = parseInt(amount.textContent.trim()) || 1;
+
+    const item = {
+        id: duck.id,
+        compras: cantidad
+    };
+
+    let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+
+    const existente = carrito.find(p => p.id === duck.id);
+
+    if (existente) {
+        existente.compras = cantidad;
+    } else {
+        carrito.push(item);
+    }
+
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+
+    console.log("Guardado:", carrito);
+});
