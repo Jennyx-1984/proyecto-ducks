@@ -1,43 +1,56 @@
-export let listaPatitos = [
-    {photo: "assets\images\black_duck.jpg",
-     nombre: "Patito Estrella Negro",
-     estrellas: 5, 
-     precio: 15, 
-     moneda: "€",
-     rol: "Para problemas de HTML",
-     stock: 56,
-     historia: "Conocido como el Patito Estelar, no solo flota, sino que se desliza silenciosamente, como siguiendo corrientes invisibles de energía cósmica. Te ayudara a resolver cualquier duda sobre HTML. Ya sea un juguete mágico del cosmos o un pequeño guardián de la paz nocturna, el patito de goma negro con estrellas plateadas sigue siendo una pequeña y misteriosa pieza del universo: silencioso, constante y siempre vigilante del cielo."
-     },
-    {photo: "assets\images\magician-magic-duck.jpg",
-     nombre: "Patito Mago",
-     estrellas: 2, 
-     precio: 16,
-     moneda: "€",
-     rol: "Para problemas de CSS ",
-     stock: 73,
-     historia: "Conocido como el Patito Magico, no solo flota, sino que se desliza silenciosamente, como siguiendo corrientes invisibles de energía cósmica. Te ayudara a resolver cualquier duda sobre HTML. Ya sea un juguete mágico del cosmos o un pequeño guardián de la paz nocturna, el patito de goma negro con estrellas plateadas sigue siendo una pequeña y misteriosa pieza del universo: silencioso, constante y siempre vigilante del cielo."
-    },
-    {photo: "assets\images\blue-magic-duck.jpg",
-     nombre: "Patito Estrella Azul", 
-     estrellas: 3, 
-     precio: 15, 
-     moneda: "€",
-     rol: "Para problemas de Javascript",
-     stock: 36,
-     historia: "Conocido como el Patito del Cielo, no solo flota, sino que se desliza silenciosamente, como siguiendo corrientes invisibles de energía cósmica. Te ayudara a resolver cualquier duda sobre HTML. Ya sea un juguete mágico del cosmos o un pequeño guardián de la paz nocturna, el patito de goma negro con estrellas plateadas sigue siendo una pequeña y misteriosa pieza del universo: silencioso, constante y siempre vigilante del cielo."
-    },
-    {photo: "assets\images\hp-duck.jpg",
-     nombre: "Patito Harry", 
-     estrellas: 5, 
-     precio: 20, 
-     moneda: "€",
-     rol: "Para problemas de Python",
-     stock: 23,
-     historia: "Conocido como el Patito Elejido, no solo flota, sino que se desliza silenciosamente, como siguiendo corrientes invisibles de energía cósmica. Te ayudara a resolver cualquier duda sobre HTML. Ya sea un juguete mágico del cosmos o un pequeño guardián de la paz nocturna, el patito de goma negro con estrellas plateadas sigue siendo una pequeña y misteriosa pieza del universo: silencioso, constante y siempre vigilante del cielo."
-    }
-]
+import { listaPatitos } from "./lista-patitos.js"
 
-function crearCuadro () {
+let parent =document.querySelector(".lista");
 
-}
+listaPatitos.forEach(patito => {
+    let newFrame = document.createElement("div")
+    newFrame.classList.add("cuadros");
+    let newDetails = document.createElement("div");
+    newDetails.classList.add("detailles");
+    let listEstrellas = document.createElement("div");
+    listEstrellas.classList.add("estrellas");
+    let newPhoto = document.createElement("img");
+    newPhoto.classList.add("patitos");
+    newPhoto.src = patito.photo;
+    newPhoto.alt = patito.nombre;
+    let newNombre = document.createElement("p");
+    newNombre.classList.add("nombrePatito");
+    newNombre.textContent = patito.nombre;
+    for (let i = 1; i <= patito.estrellas; i++) {
+        let newEstrellas = document.createElement("img");
+        newEstrellas.classList.add("stars");
+        newEstrellas.src = "../assets/images/star.png";
+        newEstrellas.alt = patito.estrellas + " estrellas";
+        listEstrellas.appendChild(newEstrellas);
+    };
+    let newPrecio = document.createElement("p");
+    newPrecio.classList.add("precio");
+    newPrecio.textContent = patito.precio + patito.moneda;
+    let newRol = document.createElement("p");
+    newRol.classList.add("rol");
+    newRol.textContent = patito.rol;
+    let buttonCompra = document.createElement("button");
+    buttonCompra.classList.add("boton-compra");
+    buttonCompra.textContent = "Comprar";
 
+    //buttonCompra.setAttribute("click", ()=> {window.location.href= `producto.html?id=${productoId}`; });
+   
+    //buttonCompra.click(function(){
+    //    window.location.href= `producto.html?id=${productoId}`
+    //});
+
+    function clickToCompra(){
+        window.location.href= `producto.html?id=${patito.id}`;
+    };
+    buttonCompra.addEventListener("click", clickToCompra);
+
+    parent.appendChild(newFrame);
+    newFrame.appendChild(newPhoto);
+    newFrame.appendChild(newDetails);
+    newDetails.appendChild(newNombre);
+    newDetails.appendChild(listEstrellas);
+    newDetails.appendChild(newPrecio);
+    newDetails.appendChild(newRol);
+    newDetails.appendChild(buttonCompra);
+   
+    })
