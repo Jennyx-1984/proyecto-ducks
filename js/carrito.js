@@ -35,10 +35,10 @@ const carrito = document.querySelector(".carrito");
 // MOSTRAR CARRITO
 // ================================
 function renderCarrito() {
+    if (!carrito) return; // si no existe el contenedor, salimos
+    carrito.innerHTML = ""; // limpiar
 
-    carrito.innerHTML = ""; // limpiar siempre
-
-    // filtrar patitos con compras > 0
+    // para no mostrar patitos con cantidades inferiores a 1
     const visibles = listaPatitos.filter(p => p.compras > 0);
 
     // si no hay patitos muestra mensaje y se sale
@@ -201,11 +201,12 @@ const botonComprar = document.createElement("button");
 botonComprar.classList.add("comprar");
 botonComprar.textContent = "Comprar";
 
+
 botonComprar.addEventListener("click", () => {
-    
     // Cargar carrito desde localStorage
     const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
+    //muestra mensaje si eliminas todos los articulos del carro
     if (carrito.length === 0) {
         alert("No hay productos para comprar");
         return;
@@ -216,7 +217,6 @@ botonComprar.addEventListener("click", () => {
 
     carrito.forEach(item => {
         const producto = listaPatitos.find(p => p.id === item.id);
-
         if (!producto) return;
 
         const nombre = producto.nombre;
@@ -226,21 +226,41 @@ botonComprar.addEventListener("click", () => {
 
         totalFinal += subtotal;
 
+        // RESTAR stock
+        producto.stock -= cantidad;
+
         mensaje += `
 🐤 ${nombre}
    Cantidad: ${cantidad}
-   Precio unitario: ${precio}€
-   Subtotal: ${subtotal}€
-
+   Precio unitario: ${precio}${producto.moneda}
+   Subtotal: ${subtotal}${producto.moneda}
 `;
+
+        // Reset compras para vaciar el carrito
+        producto.compras = 0;
     });
 
     mensaje += "------------------------\n";
     mensaje += `💰 TOTAL FINAL: ${totalFinal}€`;
 
+    // Mostrar la factura
     alert(mensaje);
 
+    // Vaciar carrito en localStorage
+    localStorage.removeItem("carrito");
+    localStorage.setItem("cartCount", 0); // actualizar contador global
+
+    // Actualizar la interfaz del botón flotante
+    const cartCountEl = document.getElementById("cart-count");
+    const cartWrapper = document.querySelector(".cart-wrapper");
+    if (cartCountEl) cartCountEl.textContent = 0;
+    if (cartWrapper) cartWrapper.classList.add("hidden");
+
+    // Redirigir a la página principal
+    window.location.href = "../index.html";
 });
+
+
 
 // ============================================
 // FUNCION RECALCULAR TOTAL
