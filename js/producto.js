@@ -1,48 +1,39 @@
-//import {listaPatitos} from './catalogo.js';
+import {listaPatitos} from '../js/lista-patitos.js';
+const urlParams = new URLSearchParams(window.location.search);
+
+const duckId = parseInt(urlParams.get('id'));
 const duckTitle = document.getElementById('duckTitle');
 const duckPrice = document.getElementById('duckPrice');
 const duckImage = document.getElementById('duckImage');
 const duckDescription = document.getElementById('duckDescription');
 const ratingStars = document.getElementById('ratingStars'); 
 const duckStock = document.getElementById('stock');
-let listaPatitos = [{}];
-let patito = 
-    {nombre: "Patito 1",
-     estrellas: 5, 
-     precio: 15, 
-     moneda: "€",
-     rol: "Para problemas de HTML",
-     image: "../assets/images/black_duck.jpg",
-    description:"patopatoso",
-    stock: 26};
+const duckRol = document.getElementById('duckRol');
 
 
-const duckInfo = function(patito){
-    for (let id of listaPatitos){
-    if (id.nombre == patito.nombre){
-        return patito;
-        }else{
-         let lostPatito = {
+const lostPatito = {
+        photo: "../assets/images/patitopatoso.png",
         nombre: "Patito Perdido",
         estrellas: 0,
         precio: 0,
         moneda: "€",
         rol: "No disponible",
-        image: "../assets/images/patitopatoso.png",
-        description: "patopatoso",
-        stock: 0
-    }
-    return lostPatito;
-}
-}
-}
+        stock: 0,
+        historia: "Lo sentimos, el patito que buscas no se encuentra en nuestro catálogo. Por favor, regresa a la página principal para explorar nuestros productos disponibles."
+    };
+    
+const possibleDuck = listaPatitos.find((patito) => {
+    return patito.id === duckId;
+      });
 
-let duck = duckInfo(patito);
+const duck = possibleDuck ? possibleDuck : lostPatito;
+
 duckTitle.textContent = duck.nombre;
 duckPrice.textContent = duck.precio + duck.moneda;
-duckImage.src = duck.image;
+duckImage.src = duck.photo;
 duckImage.alt = "imagen de "+ duck.nombre;
-duckDescription.textContent = duck.description;
+duckRol.textContent = duck.rol;
+duckDescription.textContent = duck.historia;
 ratingStars.src = `../assets/images/estrellitas ${duck.estrellas}.PNG`;
 ratingStars.alt = `Imagen de ${duck.estrellas} estrellas`;
 duckStock.textContent = `Stock: ${duck.stock}`;
