@@ -9,7 +9,7 @@ export let listaPatitos = [
      stock: 56,
      compras: 0,
      historia: "Conocido como el Patito Estelar, no solo flota, sino que se desliza silenciosamente, como siguiendo corrientes invisibles de energía cósmica. Te ayudara a resolver cualquier duda sobre HTML. Ya sea un juguete mágico del cosmos o un pequeño guardián de la paz nocturna, el patito de goma negro con estrellas plateadas sigue siendo una pequeña y misteriosa pieza del universo: silencioso, constante y siempre vigilante del cielo."
-     },
+    },
     {id: 2,
      photo: "../assets/images/magician-magic-duck.jpg",
      nombre: "Patito Mago",
@@ -44,3 +44,5 @@ export let listaPatitos = [
      historia: "Conocido como el Patito Elejido, no solo flota, sino que se desliza silenciosamente, como siguiendo corrientes invisibles de energía cósmica. Te ayudara a resolver cualquier duda sobre HTML. Ya sea un juguete mágico del cosmos o un pequeño guardián de la paz nocturna, el patito de goma negro con estrellas plateadas sigue siendo una pequeña y misteriosa pieza del universo: silencioso, constante y siempre vigilante del cielo."
     }
 ]
+
+

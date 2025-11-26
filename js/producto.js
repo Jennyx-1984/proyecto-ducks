@@ -1,5 +1,5 @@
 import {listaPatitos} from '../js/lista-patitos.js';
-import { addToCart } from './boton-cart.js';
+
 const urlParams = new URLSearchParams(window.location.search);
 
 const duckId = parseInt(urlParams.get('id'));
@@ -50,58 +50,23 @@ duckStock.textContent = `Stock: ${duck.stock}`;
 
 
 //añadido
-
 // Obtener elementos
 const botonComprar = document.getElementById("compra");
 const amount = document.getElementById("contador");
-
-/*botonComprar.addEventListener("click", () => {
-
-    // Convertir el contenido del div en número
-    const cantidad = parseInt(amount.textContent.trim()) || 1;
-
-    const item = {
-        id: duck.id,
-        compras: cantidad
-    };
-
-    // Leer carrito actual
-    let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
-
-    // Buscar si ya existe
-    const existente = carrito.find(p => p.id === duck.id);
-
-    if (existente) {
-        existente.compras = cantidad; //actualizar cantidad
-    } else {
-        carrito.push(item); //añadir nuevo
-    }
-
-    // Guardar
-    localStorage.setItem("carrito", JSON.stringify(carrito));
-
-});*/
-
 botonComprar.addEventListener("click", () => {
-
     const cantidad = parseInt(amount.textContent.trim()) || 1;
-
     const item = {
         id: duck.id,
         compras: cantidad
-    };
-
+        };
     let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
-
     const existente = carrito.find(p => p.id === duck.id);
-
     if (existente) {
         existente.compras = cantidad;
     } else {
         carrito.push(item);
     }
-
     localStorage.setItem("carrito", JSON.stringify(carrito));
-
     console.log("Guardado:", carrito);
 });
+

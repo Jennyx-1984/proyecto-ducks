@@ -33,12 +33,6 @@ listaPatitos.forEach(patito => {
     buttonCompra.classList.add("boton-compra");
     buttonCompra.textContent = "Comprar";
 
-    //buttonCompra.setAttribute("click", ()=> {window.location.href= `producto.html?id=${productoId}`; });
-   
-    //buttonCompra.click(function(){
-    //    window.location.href= `producto.html?id=${productoId}`
-    //});
-
     function clickToCompra(){
         window.location.href= `producto.html?id=${patito.id}`;
     };
@@ -54,3 +48,6 @@ listaPatitos.forEach(patito => {
     newDetails.appendChild(buttonCompra);
    
     })
+
+
+

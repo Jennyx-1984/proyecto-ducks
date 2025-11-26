@@ -1,6 +1,6 @@
 import { startLoading } from '../loading.js';
 import { initCartButton, addToCart } from '../boton-cart.js';
-import { initMenu } from '../header.js'; // <-- Importamos initMenu
+import { initMenu } from '../header.js';
 
 document.addEventListener("DOMContentLoaded", () => {
 
