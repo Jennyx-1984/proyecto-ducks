@@ -20,6 +20,7 @@ const lostPatito = {
         stock: 0,
         historia: "Lo sentimos, el patito que buscas no se encuentra en nuestro catálogo. Por favor, regresa a la página principal para explorar nuestros productos disponibles."
     };
+
     
 const possibleDuck = listaPatitos.find((patito) => {
     return patito.id === duckId;
@@ -70,3 +71,4 @@ botonComprar.addEventListener("click", () => {
     console.log("Guardado:", carrito);
 });
 
+export{duck} 
