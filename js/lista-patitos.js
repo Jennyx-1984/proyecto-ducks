@@ -8,6 +8,7 @@ export let listaPatitos = [
      rol: "Para problemas de HTML",
      stock: 56,
      compras: 0,
+     categoria: "Frontend",
      historia: "Conocido como el Patito Estelar, no solo flota, sino que se desliza silenciosamente, como siguiendo corrientes invisibles de energía cósmica. Te ayudara a resolver cualquier duda sobre HTML. Ya sea un juguete mágico del cosmos o un pequeño guardián de la paz nocturna, el patito de goma negro con estrellas plateadas sigue siendo una pequeña y misteriosa pieza del universo: silencioso, constante y siempre vigilante del cielo."
     },
     {id: 2,
@@ -19,6 +20,7 @@ export let listaPatitos = [
      rol: "Para problemas de CSS ",
      stock: 73,
      compras: 0,
+     categoria: "Frontend",
      historia: "Conocido como el Patito Magico, no solo flota, sino que se desliza silenciosamente, como siguiendo corrientes invisibles de energía cósmica. Te ayudara a resolver cualquier duda sobre HTML. Ya sea un juguete mágico del cosmos o un pequeño guardián de la paz nocturna, el patito de goma negro con estrellas plateadas sigue siendo una pequeña y misteriosa pieza del universo: silencioso, constante y siempre vigilante del cielo."
     },
     {id: 3,
@@ -30,6 +32,7 @@ export let listaPatitos = [
      rol: "Para problemas de Javascript",
      stock: 36,
      compras: 0,
+     categoria: "FullStack",
      historia: "Conocido como el Patito del Cielo, no solo flota, sino que se desliza silenciosamente, como siguiendo corrientes invisibles de energía cósmica. Te ayudara a resolver cualquier duda sobre HTML. Ya sea un juguete mágico del cosmos o un pequeño guardián de la paz nocturna, el patito de goma negro con estrellas plateadas sigue siendo una pequeña y misteriosa pieza del universo: silencioso, constante y siempre vigilante del cielo."
     },
     {id: 4,
@@ -41,8 +44,31 @@ export let listaPatitos = [
      rol: "Para problemas de Python",
      stock: 23,
      compras: 0,
+     categoria: "Backend",
      historia: "Conocido como el Patito Elejido, no solo flota, sino que se desliza silenciosamente, como siguiendo corrientes invisibles de energía cósmica. Te ayudara a resolver cualquier duda sobre HTML. Ya sea un juguete mágico del cosmos o un pequeño guardián de la paz nocturna, el patito de goma negro con estrellas plateadas sigue siendo una pequeña y misteriosa pieza del universo: silencioso, constante y siempre vigilante del cielo."
-    }
+    },
+
 ]
+/*
+    {id: 5,
+    photo: "../assets/images/Biker-Duck.jpg",
+    nombre: "Biker Duck", 
+    estrellas: 5, 
+    precio: 18, 
+    moneda: "€",
+    rol: "Para problemas de GithHub",
+    stock: 63,
+    compras: 0,
+    historia: "Conocido como el Patito Hell Angel, no solo flota, sino que se desliza silenciosamente, como siguiendo corrientes invisibles de energía cósmica. Te ayudara a resolver cualquier duda sobre HTML. Ya sea un juguete mágico del cosmos o un pequeño guardián de la paz nocturna, el patito de goma negro con estrellas plateadas sigue siendo una pequeña y misteriosa pieza del universo: silencioso, constante y siempre vigilante del cielo."
+    }
 
+*/
 
+const stockGuardado = JSON.parse(localStorage.getItem("stockPatitos"));
+
+if (stockGuardado) {
+    stockGuardado.forEach(s => {
+        const patito = listaPatitos.find(p => p.id === s.id);
+        if (patito) patito.stock = s.stock; // siempre pisa
+    });
+}
