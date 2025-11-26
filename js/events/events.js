@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
   } else {
     // En otras páginas bloquear el loading
     const loadingScreen = document.getElementById("loading-screen");
-    if (loadingScreen) loadingScreen.remove(); // <-- corregido: antes tenías loadingEl.remove()
+    if (loadingScreen) loadingScreen.remove();
     if (pageContent) pageContent.style.display = "block";
   }
 
