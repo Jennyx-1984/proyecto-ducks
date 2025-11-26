@@ -1,6 +1,6 @@
 import { startLoading } from '../loading.js';
 import { initCartButton, addToCart } from '../boton-cart.js';
-import { initMenu } from '../header.js'; // <-- Importamos initMenu
+import { initMenu } from '../header.js';
 
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -11,11 +11,22 @@ document.addEventListener("DOMContentLoaded", () => {
   // Captar el botón de compra más cercano
   document.addEventListener("click", (e) => {
     const btn = e.target.closest(".botoncomprar");
-    if (btn) {
-      e.preventDefault();
-      addToCart(2); // suma 2 unidades, utilizado como testeo
-    }
+    if (!btn) return;
+
+    e.preventDefault();
+
+    // --- Obtener cantidad ---
+    const contador = document.getElementById("contador");
+    const amount = parseInt(contador.textContent.trim()) || 1;
+
+    // --- Obtener ID del patito desde la URL ---
+    const params = new URLSearchParams(window.location.search);
+    const duckId = parseInt(params.get("id"));
+
+    // --- Pasar valores a addToCart ---
+    addToCart(amount, duckId);
   });
+});
 
   // Loading screen solo la primera vez en index.html
   const pageContent = document.getElementById("page-content");
@@ -54,6 +65,4 @@ document.addEventListener("DOMContentLoaded", () => {
     if (loadingScreen) loadingScreen.remove(); // <-- corregido: antes tenías loadingEl.remove()
     if (pageContent) pageContent.style.display = "block";
   }
-
-});
 

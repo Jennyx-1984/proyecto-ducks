@@ -46,8 +46,12 @@ h2{
     gap: 40px; 
     align-content: center; 
 }
-.estrellitas4{
+.estrellas{
     height: 40px;
+}
+.stars{
+    height: 30px;
+    width: 30px;
 }
 #stock26 {
     position: relative;
