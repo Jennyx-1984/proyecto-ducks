@@ -59,3 +59,12 @@ export let listaPatitos = [
     }
 
 */
+
+const stockGuardado = JSON.parse(localStorage.getItem("stockPatitos"));
+
+if (stockGuardado) {
+    stockGuardado.forEach(s => {
+        const patito = listaPatitos.find(p => p.id === s.id);
+        if (patito) patito.stock = s.stock; // siempre pisa
+    });
+}
