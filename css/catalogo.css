@@ -78,7 +78,13 @@ h1 {
     column-gap: -5pcx;
 }
 
-
+.filter{
+    position: relative;
+    display: inline-block;
+    margin-left: auto;
+    right: 200px;
+    margin-bottom: 20px;
+}
 
 #black-duck{
     position: relative;
@@ -101,4 +107,29 @@ h1 {
 #hp-duck{
     position: relative;
 
+}
+#filter{
+    appearance: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    padding: 8px 12px;
+    font-size: 1rem;
+    color: #333;
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+}
+.filter::after{
+    content: "\23F7";
+    font-family: Arial, sans-serif;
+    font-size: 1.2rem;
+    color: #555;
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
 }
