@@ -1,42 +1,75 @@
-//Crear el botón del carrito
+// ================================
+// CREAR BOTÓN DEL CARRITO
+// ================================
 function createCartButton() {
-  const cartButtonHtml = `
-    <div id="cart-wrapper" class="cart-wrapper hidden">
-      <a href="../pages/carrito.html">
-        <div id="cart-button" class="cart-button">
-          <img src="../assets/images/iconos/carrito-patito.png" alt="carrito de compra" class="carrito-compra">
-        </div>
-      </a>
-      <span id="cart-count" class="cart-count">0</span>
-    </div>
-  `;
+  const cartButtonHtml = `<div id="cart-wrapper" class="cart-wrapper hidden">
+  <div id="cart-button" class="cart-button">
+    <img src="../assets/images/iconos/carrito-patito.png" alt="carrito de compra" class="carrito-compra">
+  </div>
+  <span id="cart-count" class="cart-count">0</span>
+</div>`;
   document.body.insertAdjacentHTML("beforeend", cartButtonHtml);
 }
 
-//Inicializar carrito
+// ================================
+// INICIALIZAR CARRITO
+// ================================
 function initCartButton() {
+  const currentPage = window.location.pathname;
+
+  // No mostrar el carrito si estamos en carrito.html
+  if (currentPage.includes("carrito.html")) return;
+
+  // Crear el botón dinámicamente
   createCartButton();
-  const cartCount = parseInt(localStorage.getItem("cartCount")) || 0;
+
+  // Obtener elementos después de crearlos
   const cartWrapper = document.querySelector(".cart-wrapper");
   const cartCountEl = document.getElementById("cart-count");
+  const cartButton = document.getElementById("cart-button");
 
+  // Conectar click al botón flotante
+  cartButton.addEventListener("click", (e) => {
+      e.preventDefault(); // opcional: evita ir al enlace
+      window.location.href = "../pages/carrito.html";
+  });
+
+  // Mostrar cantidad si hay productos en localStorage
+  const cartCount = parseInt(localStorage.getItem("cartCount")) || 0;
   if (cartCount > 0) {
     cartWrapper.classList.remove("hidden");
     cartCountEl.textContent = cartCount;
   }
 }
 
-// Agregar productos al carrito
-function addToCart(amount = 1) {
-  let cartCount = parseInt(localStorage.getItem("cartCount")) || 0;
-  cartCount += amount;
-  localStorage.setItem("cartCount", cartCount);
+// ================================
+// AÑADIR PRODUCTOS AL CARRITO
+// ================================
+function addToCart(amount, duckId) {
+    // Obtener carrito actual
+    let cartItems = JSON.parse(localStorage.getItem("cartItems")) || {};
 
-  const cartWrapper = document.querySelector(".cart-wrapper");
-  const cartCountEl = document.getElementById("cart-count");
-  cartWrapper.classList.remove("hidden");
-  cartCountEl.textContent = cartCount;
+    // Sobrescribir la cantidad actual del patito
+    cartItems[duckId] = amount;
+
+    // Guardar en localStorage
+    localStorage.setItem("cartItems", JSON.stringify(cartItems));
+
+    // Recalcular el total global
+    const cartCount = Object.values(cartItems).reduce((acc, val) => acc + val, 0);
+    localStorage.setItem("cartCount", cartCount);
+
+    // Actualizar interfaz
+    const cartWrapper = document.querySelector(".cart-wrapper");
+    const cartCountEl = document.getElementById("cart-count");
+    if (cartWrapper && cartCountEl) {
+        cartWrapper.classList.remove("hidden");
+        cartCountEl.textContent = cartCount;
+    }
 }
 
-// Exportar funciones
+// ================================
+// EXPORTAR FUNCIONES
+// ================================
 export { initCartButton, addToCart };
+

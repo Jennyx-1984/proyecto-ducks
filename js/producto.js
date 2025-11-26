@@ -1,4 +1,5 @@
 import {listaPatitos} from '../js/lista-patitos.js';
+
 const urlParams = new URLSearchParams(window.location.search);
 
 const duckId = parseInt(urlParams.get('id'));
@@ -8,7 +9,6 @@ const duckImage = document.getElementById('duckImage');
 const duckDescription = document.getElementById('duckDescription');
 const duckStock = document.getElementById('stock');
 const duckRol = document.getElementById('duckRol');
-
 
 const lostPatito = {
         photo: "../assets/images/patitopatoso.png",
@@ -47,7 +47,26 @@ parent.prepend(listEstrellas);
 duckRol.textContent = duck.rol;
 duckDescription.textContent = duck.historia;
 duckStock.textContent = `Stock: ${duck.stock}`;
-/*
-let contador= getElementById("contador").textContent;
-const compra= document.getElementById("compra");
-compra.addEventListener("click", () => {*/
+
+
+//añadido
+// Obtener elementos
+const botonComprar = document.getElementById("compra");
+const amount = document.getElementById("contador");
+botonComprar.addEventListener("click", () => {
+    const cantidad = parseInt(amount.textContent.trim()) || 1;
+    const item = {
+        id: duck.id,
+        compras: cantidad
+        };
+    let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+    const existente = carrito.find(p => p.id === duck.id);
+    if (existente) {
+        existente.compras = cantidad;
+    } else {
+        carrito.push(item);
+    }
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+    console.log("Guardado:", carrito);
+});
+
