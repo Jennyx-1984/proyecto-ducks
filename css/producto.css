@@ -16,6 +16,8 @@ button{
 }
 main{
     width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 address {
   all: unset;
@@ -53,7 +55,7 @@ h2{
     height: 30px;
     width: 30px;
 }
-#stock26 {
+#stock {
     position: relative;
     align-content: center;
     color:#008214;
@@ -121,4 +123,11 @@ h2{
     color:white;
     font-size: 20px;
     font-weight: bold;
+}
+/*media querys para adaptative)*/
+/*tablet*/
+@media  (width <992px) {
+    .madre{
+        flex-direction: column;
+    }
 }
