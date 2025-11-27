@@ -104,3 +104,4 @@ botonComprar?.addEventListener("click", () => {
     amount.textContent = 1;
 });
 export { duck };
+

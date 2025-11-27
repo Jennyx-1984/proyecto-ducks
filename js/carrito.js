@@ -214,3 +214,4 @@ function factura(){
 // Llamada inicial
 renderCarrito();
 actualizarCartCount();
+
