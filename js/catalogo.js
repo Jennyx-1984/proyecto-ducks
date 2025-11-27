@@ -39,6 +39,7 @@ function patitosARenderizar(list){
         window.location.href= `producto.html?id=${patito.id}`;
     };
     buttonCompra.addEventListener("click", clickToCompra);
+    newPhoto.addEventListener("click", clickToCompra);
 
     parent.appendChild(newFrame);
     newFrame.appendChild(newPhoto);
