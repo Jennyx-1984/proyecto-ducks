@@ -40,6 +40,11 @@ h1 {
 .patitos{
     height: 200px;
     margin: 50px;
+    transition: transform 0.3s ease; 
+}
+.patitos:hover{
+    cursor: pointer;
+    transform: scale(1.2);
 }
 
 .detailles{
@@ -72,6 +77,12 @@ h1 {
     padding: 5px;
     position: relative;
     top: 100px;
+    transition: transform 0.3s ease;
+}
+
+.boton-compra:hover{
+    cursor: pointer;
+    transform: scale(1.1); 
 }
 
 .comprar{
