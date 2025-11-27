@@ -107,11 +107,16 @@ article{
     align-items: center;
 }
 
+.botondisminuir,.botonincrementar{
+    background-color: gray;
+    color: white;
+    font-weight: bold;
+}
 .btn-eliminar{
     background-color: transparent;
 }
 .campo-vacio {
-    width: 40px; 
+    width: 40px;
 }
 
 .papelera img {
