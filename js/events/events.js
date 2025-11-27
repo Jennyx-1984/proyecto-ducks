@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (window.location.pathname.endsWith("index.html") || window.location.pathname === "/") {
     
-    if (!localStorage.getItem("indexCargado")) {
+    if (!sessionStorage.getItem("indexCargado")) { //cambiado el local por session
 
       // Crear el div de loading
       const loadingDiv = document.createElement("div");
@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
       startLoading();
 
       // Se mostró la pantalla de loading
-      localStorage.setItem("indexCargado", "true");
+      sessionStorage.setItem("indexCargado", "true");//cambiado el local por session
 
     } else {
       // Si ya se mostró, enseña el contenido
