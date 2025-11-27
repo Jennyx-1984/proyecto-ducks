@@ -91,11 +91,11 @@ h1 {
     font-weight: bold;
 }
 
-.quantity{
+/*.quantity{
     display: grid;
     grid-template-columns: 25% 50% 25%;
     column-gap: -5pcx;
-}
+}*/
 
 .filter{
     position: relative;
@@ -105,7 +105,7 @@ h1 {
     margin-bottom: 20px;
 }
 
-#black-duck{
+/*#black-duck{
     position: relative;
     left: 30px;
 }
@@ -126,7 +126,7 @@ h1 {
 #hp-duck{
     position: relative;
 
-}
+}*/
 #filter{
     appearance: none;
     border: 1px solid #ccc;
@@ -153,7 +153,6 @@ h1 {
     pointer-events: none;
 }
 /*media querys para adaptative)*/
-/*tablet*/
 @media  (width <992px) {
     .lista{
         display: flex;

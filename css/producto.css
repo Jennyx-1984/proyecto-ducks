@@ -125,7 +125,6 @@ h2{
     font-weight: bold;
 }
 /*media querys para adaptative)*/
-/*tablet*/
 @media  (width <992px) {
     .madre{
         flex-direction: column;
