@@ -15,6 +15,7 @@ if (nstock) {
     alert("Sin stock")
 }
 
+
 botonmas.addEventListener("click", () => {
     if(contador < nstock){
     contador ++;
@@ -22,7 +23,7 @@ botonmas.addEventListener("click", () => {
    } else{
     alert("Sin stock");
    }
-})
+}, )
 
 botonmenos.addEventListener("click",() => {
     if (contador>0) {
