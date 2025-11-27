@@ -2,6 +2,26 @@ import { startLoading } from '../loading.js';
 import { initCartButton, addToCart } from '../boton-cart.js';
 import { initMenu } from '../header.js';
 
+export function actualizarCartCount() {
+    const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+
+    const total = carrito.reduce((acc, item) => acc + item.compras, 0);
+
+    // Guardar en localStorage
+    localStorage.setItem("cartCount", total);
+
+    // Actualizar botón flotante
+    const cartCountEl = document.getElementById("cart-count");
+    const cartWrapper = document.querySelector(".cart-wrapper");
+
+    if (cartCountEl) cartCountEl.textContent = total;
+
+    if (cartWrapper) {
+        if (total > 0) cartWrapper.classList.remove("hidden");
+        else cartWrapper.classList.add("hidden");
+    }
+}
+
 document.addEventListener("DOMContentLoaded", () => {
 
   // Inicializar menú y carrito en todas las páginas
@@ -15,25 +35,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
     e.preventDefault();
 
-    // --- Obtener cantidad ---
+    //Obtener cantidad
     const contador = document.getElementById("contador");
     const amount = parseInt(contador.textContent.trim()) || 1;
 
-    // --- Obtener ID del patito desde la URL ---
+    //Obtener ID del patito desde la URL
     const params = new URLSearchParams(window.location.search);
     const duckId = parseInt(params.get("id"));
 
-    // --- Pasar valores a addToCart ---
+    //Pasar valores a addToCart
     addToCart(amount, duckId);
   });
 });
 
-  // Loading screen solo la primera vez en index.html
+  //Loading screen solo la primera vez en index.html
   const pageContent = document.getElementById("page-content");
 
   if (window.location.pathname.endsWith("index.html") || window.location.pathname === "/") {
     
-    if (!sessionStorage.getItem("indexCargado")) { //cambiado el local por session
+    if (!sessionStorage.getItem("indexCargado")) {
 
       // Crear el div de loading
       const loadingDiv = document.createElement("div");
@@ -52,7 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
       startLoading();
 
       // Se mostró la pantalla de loading
-      sessionStorage.setItem("indexCargado", "true");//cambiado el local por session
+      sessionStorage.setItem("indexCargado", "true");
 
     } else {
       // Si ya se mostró, enseña el contenido
