@@ -20,9 +20,6 @@
           <li><img src="../assets/images/iconos/inicio.png" alt="icono casita"><a href="../index.html">Inicio</a></li>
             <li><img src="../assets/images/iconos/carro.png" alt="icono carro de compra"><a href="../pages/Catalogo.html">Tienda</a></li>
             <li><img src="../assets/images/iconos/dato-de-contacto.png" alt="icono contacto"><a href="../pages/contacto.html">Contacto</a></li>
-
-
-          
         </ul>
         <button class="boton-menu"><i class="fa fa-bars fa-3" aria-hidden="true"></i></button> 
           <div class="menu">
@@ -41,17 +38,15 @@
     </header>
  <main>
     <h1>TIENDA</h1>
-
+      <div class="filter"> 
+        <label for="filter">Filtrar por:</label>
+        <select class="selector" id="filter">
+            <!--categorias cargada por JS--></select>
+      </div>
     <section class="lista">
-
-    
     </section>
-
-
  </main>
-
  <script src="../js/catalogo.js" type="module"></script>
-
 <footer>
       <div class="footer-container">
       <div class="info-footer">
@@ -68,7 +63,6 @@
         <a href="#" class="enlace-custom"><span class="custom">X</span></a>
         <a href="#" class="enlace-custom"><span class="custom">Instagram</span></a>
       </div>
-      
     </footer>
     <script src="../js/events/events.js" type="module"></script>
  </body>

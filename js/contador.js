@@ -1,5 +1,4 @@
-import { listaPatitos } from "./lista-patitos.js";
-import {duck} from"./producto.js"
+import {duck} from "./producto.js"
 
 let contador= 0;
 
