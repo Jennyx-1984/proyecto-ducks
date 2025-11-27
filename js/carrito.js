@@ -151,9 +151,11 @@ function renderCarrito() {
             mensaje += "------------------------\n";
             mensaje += `💰 TOTAL FINAL: ${totalFinal}€`;
 
+            
+            if(!factura()){
             alert(mensaje);
             alert("COMPRA EXITOSA");
-
+            }
             localStorage.removeItem("cartItems");
             localStorage.removeItem("cartCount");
             actualizarCartCount();
@@ -198,7 +200,17 @@ function recalcularTotal() {
     const precioTotalEl = document.querySelector(".precio-total");
     if (precioTotalEl) precioTotalEl.textContent = `${total}${moneda}`;
 }
+function factura(){
+    
+   let cardNumber = prompt("Introduce número de tarjeta (13–16 dígitos):");
 
+    while (!/^\d{13,16}$/.test(cardNumber)) {
+        cardNumber = prompt("❌ Solo números y entre 13 y 16 dígitos.\nIntroduce número de tarjeta:");
+    }
+
+    let masked = cardNumber.replace(/(.{4})/g, "$1 ").trim();
+    alert("Número de tarjeta: " + masked);
+}
 // Llamada inicial
 renderCarrito();
 actualizarCartCount();
