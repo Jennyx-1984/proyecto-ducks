@@ -141,3 +141,11 @@ h1 {
     transform: translateY(-50%);
     pointer-events: none;
 }
+/*media querys para adaptative)*/
+/*tablet*/
+@media  (width <992px) {
+    .lista{
+        display: flex;
+        flex-direction: column;
+    }
+}
