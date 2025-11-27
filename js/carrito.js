@@ -125,57 +125,58 @@ function renderCarrito() {
         carritoContainer.appendChild(botonComprar);
 
         botonComprar.addEventListener("click", () => {
-            const carrito = listaPatitos.filter(p => p.compras > 0);
-            if (carrito.length === 0) {
-                alert("No hay productos para comprar");
-                return;
-            }
+    const carrito = listaPatitos.filter(p => p.compras > 0);
+    if (carrito.length === 0) {
+        alert("No hay productos para comprar");
+        return;
+    }
 
-            let totalFinal = 0;
-            let mensaje = "🧾 FACTURA DE COMPRA\n------------------------\n";
+    if(!factura()) {
+        // Si cancela, simplemente volvemos al carrito sin modificar nada
+        alert("Pago cancelado. Volviendo al carrito.");
+        renderCarrito(); // Mantiene cantidades
+        return;
+    }
 
-            carrito.forEach(producto => {
-                const subtotal = producto.precio * producto.compras;
-                totalFinal += subtotal;
-                mensaje += `
-            🐤 ${producto.nombre}
-                Cantidad: ${producto.compras}
-                Precio unitario: ${producto.precio}${producto.moneda}
-                Subtotal: ${subtotal}${producto.moneda}
-                `;
-                // RESTAR STOCK
-                producto.stock -= producto.compras;
-                producto.compras = 0;
-            });
+    // Solo si factura() devuelve true, se procede
+    let totalFinal = 0;
+    let mensaje = "🧾 FACTURA DE COMPRA\n------------------------\n";
 
-            mensaje += "------------------------\n";
-            mensaje += `💰 TOTAL FINAL: ${totalFinal}€`;
+    carrito.forEach(producto => {
+        const subtotal = producto.precio * producto.compras;
+        totalFinal += subtotal;
+        mensaje += `
+🐤 ${producto.nombre}
+    Cantidad: ${producto.compras}
+    Precio unitario: ${producto.precio}${producto.moneda}
+    Subtotal: ${subtotal}${producto.moneda}
+        `;
+        // RESTAR STOCK
+        producto.stock -= producto.compras;
+        producto.compras = 0;
+    });
 
-            
-            if(!factura()){
-            alert(mensaje);
-            alert("COMPRA EXITOSA");
-            }
-            localStorage.removeItem("cartItems");
-            localStorage.removeItem("cartCount");
-            actualizarCartCount();
+    mensaje += "------------------------\n";
+    mensaje += `💰 TOTAL FINAL: ${totalFinal}€`;
 
-            // Actualizar interfaz botón flotante
-            const cartCountEl = document.getElementById("cart-count");
-            const cartWrapper = document.querySelector(".cart-wrapper");
-            if (cartCountEl) cartCountEl.textContent = 0;
-            if (cartWrapper) cartWrapper.classList.add("hidden");
+    alert(mensaje);
+    alert("COMPRA EXITOSA");
 
-            // Redirigir a página principal
-            window.location.href = "../index.html";
+    localStorage.removeItem("cartItems");
+    localStorage.removeItem("cartCount");
+    actualizarCartCount();
 
-            // Guardar stock actualizado
-            localStorage.setItem("stockPatitos", JSON.stringify(
-                listaPatitos.map(p => ({ id: p.id, stock: p.stock }))
-            ));
+    // Redirigir a página principal
+    window.location.href = "../index.html";
 
-            renderCarrito();
-        });
+    // Guardar stock actualizado
+    localStorage.setItem("stockPatitos", JSON.stringify(
+        listaPatitos.map(p => ({ id: p.id, stock: p.stock }))
+    ));
+
+    renderCarrito();
+});
+
     }
 
     recalcularTotal();
@@ -200,16 +201,21 @@ function recalcularTotal() {
     const precioTotalEl = document.querySelector(".precio-total");
     if (precioTotalEl) precioTotalEl.textContent = `${total}${moneda}`;
 }
+
+
 function factura(){
-    
-   let cardNumber = prompt("Introduce número de tarjeta (13–16 dígitos):");
+    let cardNumber = prompt("Introduce número de tarjeta (13–16 dígitos):");
+
+    if(cardNumber === null) return false; // Usuario presionó Cancelar
 
     while (!/^\d{13,16}$/.test(cardNumber)) {
         cardNumber = prompt("❌ Solo números y entre 13 y 16 dígitos.\nIntroduce número de tarjeta:");
+        if(cardNumber === null) return false; // Cancelar durante reintento
     }
 
     let masked = cardNumber.replace(/(.{4})/g, "$1 ").trim();
     alert("Número de tarjeta: " + masked);
+    return true; // Pago completado
 }
 // Llamada inicial
 renderCarrito();

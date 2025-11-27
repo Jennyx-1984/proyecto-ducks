@@ -18,8 +18,8 @@ body{
     flex-direction: column; 
 }
 button{
-    background-color:none;
     border: none;
+    background-color: transparent;
 
 }
 
