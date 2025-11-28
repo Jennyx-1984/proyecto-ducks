@@ -11,7 +11,6 @@
 <meta content="https://github.com/Jennyx-1984/proyecto-ducks/blob/main/assets/images/logo-tienda.png?raw=true"
 property="og:image">
 <meta property="og:url" content="https://jennyx-1984.github.io/proyecto-ducks/" >
-
     <title>CODING DUCKS</title>
     <link href="css/loading.css" rel="stylesheet">
     <link href="css/reset.css" rel="stylesheet" >
@@ -58,8 +57,6 @@ property="og:image">
         </div>
       </nav>
     </header>
-    
-
   </div>
     <main>
       
@@ -68,7 +65,6 @@ property="og:image">
           <h1 class="design">BIENVENID@ A NUESTRA TIENDA DE PATITOS DE GOMA</h1>
           <h1 class="coding">{CODING DUCKS}</h1>
         </div>
-
         <div class="contenedor-video">
           <video
             controls
@@ -77,9 +73,9 @@ property="og:image">
             poster="assets/images/logo-tienda.png"
           >
             <source src="assets/video/invideo-ai-1080.mp4" type="video/mp4">
+            <track src="assets/video/subtitulos.vtt" kind="subtitles" srclang="es" label="Español" default>
           </video>
         </div>
-
         <div class="contenedor-texto">
           <article class="articulo1">
             <h2 class="st-anime-4">Nuestra tienda</h2>
@@ -87,20 +83,16 @@ property="og:image">
               Bienvenido/a a <strong>Coding Ducks</strong>, la tienda donde cada
               bug tiene su patito.
             </p>
-            <input type="checkbox" id="toggle1">
-            <label for="toggle1" class="boton1"></label>
             <p class="texto-largo1">
               Aquí creemos en el poder del <cite>rubber duck debugging</cite>:
               hablarle a un patito puede ser la mejor manera de entender tu
               propio código.
-            </p>
-            <p class="texto-largo1">
               Explora nuestro catálogo y encuentra el compañero de escritorio
               ideal para tus sesiones de programación, tus deploys nocturnos o
               tus cafés con stack traces.
             </p>
+            <button class="boton1">Mostrar más</button>
           </article>
-
           <article class="articulo2">
             <h3 class="st-anime-3">¿Qué es el rubber duck debugging?</h3>
             <p class="texto-corto2">
@@ -108,10 +100,6 @@ property="og:image">
               concepto llamado <strong>rubber duck debugging</strong>, una
               técnica de depuración muy conocida entre programadores.
             </p>
-            <input type="checkbox" id="toggle2">
-            <label for="toggle2" class="boton2"></label>
-          
-
           <article class="texto-largo2">
             <h4 class="st-anime-2" >En que consiste</h4>
             <p>
@@ -119,21 +107,16 @@ property="og:image">
               por qué no funciona, se recomienda<strong>explicarle el problema paso a paso a un 
               patito de goma</strong>(o cualquier objeto inanimado).
             </p>
-            
             <p>
               La idea es que, al tener que
               <strong>explicar el código en voz alta y con detalle</strong>, el
               desarrollador suele
               <strong>darse cuenta del error por sí mismo</strong>.
             </p>
-
             <p>
               Es decir, el patito no “ayuda” realmente… pero
               <strong>te obliga a pensar con claridad</strong>.
             </p>
-          </article>
-
-          <article class="texto-largo2">
             <h4 class="st-anime-2">De dónde viene el nombre</h4>
             <p>
               El término se popularizó por el libro
@@ -157,6 +140,7 @@ property="og:image">
               </li>
             </ul>
           </article>
+          <button class="boton2">Mostrar más</button>
           </article>
         </div>
       </section>
@@ -178,9 +162,9 @@ property="og:image">
         <a href="#" class="enlace-custom"><span class="custom">X</span></a>
         <a href="#" class="enlace-custom"><span class="custom">Instagram</span></a>
       </div>
-      
     </footer>
     <script src="js/events/events.js" type="module"></script>
+    <script src="js/mostrar.js" type="module"></script>
   </body>
 </html>
 

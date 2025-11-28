@@ -98,9 +98,10 @@ botonComprar?.addEventListener("click", () => {
     // Actualizar botón flotante
     addToCart(0, 0); // solo refresca UI sin cambiar cantidades
 
-    alert(`${cantidad} patito(s) añadido(s) al carrito`);
+    //alert(`${cantidad} patito(s) añadido(s) al carrito`);
 
     // Resetear cantidad visible
     amount.textContent = 1;
 });
 export { duck };
+
