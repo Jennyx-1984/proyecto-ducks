@@ -46,10 +46,9 @@ export let listaPatitos = [
      compras: 0,
      categoria: "Backend",
      historia: "Conocido como el Patito Elejido, no solo flota, sino que se desliza silenciosamente, como siguiendo corrientes invisibles de energía cósmica. Te ayudara a resolver cualquier duda sobre HTML. Ya sea un juguete mágico del cosmos o un pequeño guardián de la paz nocturna, el patito de goma negro con estrellas plateadas sigue siendo una pequeña y misteriosa pieza del universo: silencioso, constante y siempre vigilante del cielo."
-    },
+    }/*,
 
-]
-/*
+
     {id: 5,
     photo: "../assets/images/Biker-Duck.jpg",
     nombre: "Biker Duck", 
@@ -59,10 +58,12 @@ export let listaPatitos = [
     rol: "Para problemas de GithHub",
     stock: 63,
     compras: 0,
+    categoria: "FullStack",
     historia: "Conocido como el Patito Hell Angel, no solo flota, sino que se desliza silenciosamente, como siguiendo corrientes invisibles de energía cósmica. Te ayudara a resolver cualquier duda sobre HTML. Ya sea un juguete mágico del cosmos o un pequeño guardián de la paz nocturna, el patito de goma negro con estrellas plateadas sigue siendo una pequeña y misteriosa pieza del universo: silencioso, constante y siempre vigilante del cielo."
     }
-
 */
+
+]
 
 const stockGuardado = JSON.parse(localStorage.getItem("stockPatitos"));
 
