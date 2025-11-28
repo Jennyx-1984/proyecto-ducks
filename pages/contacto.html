@@ -66,20 +66,20 @@ property="og:image">
     <div class="campo">
     <label for="nombre"><span style="color:red;">N</span>OMBRE*</label>
     <input type="text" id="nombre" name="nombre" accesskey="n" tabindex="1" placeholder="Escribe tu nombre" aria-required="true">
-    <span id="error-nombre" aria-live="polite">ERROR</span>
+    <span id="error-nombre" role="alert" aria-live="assertive">ERROR</span>
     </div>
 
 
     <div class="campo">
     <label for="email"><span style="color:red;">E</span>MAIL*</label>
     <input type="email" id="email" name="email" accesskey="e" tabindex="2" placeholder="Tu-email@email.com" aria-required="true">
-    <span id="error-email" aria-live="polite">ERROR</span>
+    <span id="error-email" role="alert" aria-live="assertive">ERROR</span>
   </div>
     
      <div class="campo">
     <label for="comentario"><span style="color:red;">M</span>ENSAJE*</label>
     <textarea rows="10" cols="50" id="comentario" accesskey="m" tabindex="3" placeholder="Escribe un comentario" aria-required="true"></textarea>
-  <span id="error-comentario" aria-live="polite">ERROR</span>
+  <span id="error-comentario" role="alert" aria-live="assertive">ERROR</span>
   </div>
 
     <button type="submit" class="boton-enviar" tabindex="4" >ENVIAR</button>
@@ -109,3 +109,4 @@ property="og:image">
 <script src="../js/events/events.js" type="module"></script>
  </body>
 </html>
+
