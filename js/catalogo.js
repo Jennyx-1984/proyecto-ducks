@@ -1,10 +1,8 @@
 import { listaPatitos } from "./lista-patitos.js"
 
-//funcion para renderizar patitos
-function patitosARenderizar(list){
-    let parent =document.querySelector(".lista");
-    parent.innerHTML = '';
-    list.forEach(patito => {
+let parent =document.querySelector(".lista");
+
+listaPatitos.forEach(patito => {
     let newFrame = document.createElement("div")
     newFrame.classList.add("cuadros");
     let newDetails = document.createElement("div");
@@ -39,7 +37,6 @@ function patitosARenderizar(list){
         window.location.href= `producto.html?id=${patito.id}`;
     };
     buttonCompra.addEventListener("click", clickToCompra);
-    newPhoto.addEventListener("click", clickToCompra);
 
     parent.appendChild(newFrame);
     newFrame.appendChild(newPhoto);
@@ -51,34 +48,6 @@ function patitosARenderizar(list){
     newDetails.appendChild(buttonCompra);
    
     })
-}
-//funcion filtro
-function applyFilter(categoria) {
-    let filteredList;
-    if (categoria === 'Todo'){
-        filteredList = listaPatitos;
-    } else {
-        filteredList = listaPatitos.filter(patito => patito.categoria === categoria);
-    }
-    patitosARenderizar (filteredList);
-}
 
 
-//filtro
-document.addEventListener('DOMContentLoaded', () => {
-
-patitosARenderizar(listaPatitos);
-
-const filterSelect = document.getElementById("filter");
-const categorias = [... new Set(listaPatitos.map(patito => patito.categoria))];
-categorias.unshift('Todo');
-const optionsHTML = categorias.map(c => `<option value="${c}">${c}</option>`).join('');
-filterSelect.innerHTML = optionsHTML;
-
-filterSelect.addEventListener('change', (event) => {
-    const selectedCategory = event.target.value;
-    applyFilter(selectedCategory); 
-    
-});
-});
 

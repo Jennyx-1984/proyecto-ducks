@@ -133,6 +133,7 @@ h1 {
     border-radius: 4px;
     background-color: #fff;
     padding: 8px 12px;
+    width: 130px;
     font-size: 1rem;
     color: #333;
     cursor: pointer;
