@@ -89,7 +89,7 @@ function renderCarrito() {
                 localStorage.setItem("cartCount", Object.values(cartItems).reduce((a,b)=>a+b,0));
                 actualizarCartCount();
                 celdaSubtotal.textContent = `${patito.precio * patito.compras}${patito.moneda}`;
-                if (patito.compras === 0) renderCarrito(); // refresca si llega a 0
+                if (patito.compras === 0) renderCarrito();
                 recalcularTotal();
             }
         });
@@ -134,7 +134,7 @@ function renderCarrito() {
     if(!factura()) {
         // Si cancela, simplemente volvemos al carrito sin modificar nada
         alert("Pago cancelado. Volviendo al carrito.");
-        renderCarrito(); // Mantiene cantidades
+        renderCarrito();
         return;
     }
 
@@ -166,10 +166,10 @@ function renderCarrito() {
     localStorage.removeItem("cartCount");
     actualizarCartCount();
 
-    // Redirigir a página principal
+    
     window.location.href = "../index.html";
 
-    // Guardar stock actualizado
+    
     localStorage.setItem("stockPatitos", JSON.stringify(
         listaPatitos.map(p => ({ id: p.id, stock: p.stock }))
     ));
@@ -206,16 +206,16 @@ function recalcularTotal() {
 function factura(){
     let cardNumber = prompt("Introduce número de tarjeta (13–16 dígitos):");
 
-    if(cardNumber === null) return false; // Usuario presionó Cancelar
+    if(cardNumber === null) return false;
 
     while (!/^\d{13,16}$/.test(cardNumber)) {
         cardNumber = prompt("❌ Solo números y entre 13 y 16 dígitos.\nIntroduce número de tarjeta:");
-        if(cardNumber === null) return false; // Cancelar durante reintento
+        if(cardNumber === null) return false;
     }
 
     let masked = cardNumber.replace(/(.{4})/g, "$1 ").trim();
     alert("Número de tarjeta: " + masked);
-    return true; // Pago completado
+    return true;
 }
 // Llamada inicial
 renderCarrito();

@@ -25,8 +25,8 @@ export function actualizarCartCount() {
 document.addEventListener("DOMContentLoaded", () => {
 
   // Inicializar menú y carrito en todas las páginas
-  initMenu();          // <-- Inicializamos el menú del header
-  initCartButton();    // <-- Inicializamos el carrito
+  initMenu();          
+  initCartButton();  
 
   // Captar el botón de compra más cercano
   document.addEventListener("click", (e) => {

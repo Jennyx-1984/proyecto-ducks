@@ -7,7 +7,7 @@ function patitosARenderizar(list){
 
     list.forEach(patito => {
         const newFrame = document.createElement("div");
-        newFrame.classList.add("cuadros"); // NO añadimos "movimiento" aquí
+        newFrame.classList.add("cuadros");
 
         const newDetails = document.createElement("div");
         newDetails.classList.add("detailles");
@@ -59,7 +59,7 @@ function patitosARenderizar(list){
     });
 }
 
-// función para aplicar filtro y animar (correcta)
+// función para aplicar filtro y animar
 function applyFilter(categoria) {
     let filteredList;
 
@@ -69,39 +69,26 @@ function applyFilter(categoria) {
         filteredList = listaPatitos.filter(patito => patito.categoria === categoria);
     }
 
-    // renderizamos primero
     patitosARenderizar(filteredList);
 
-    // pequeña espera para asegurar que los elementos estén en DOM y pintados
-    // y que el navegador reconozca estado inicial (sin .movimiento)
     requestAnimationFrame(() => {
         const cuadros = document.querySelectorAll(".cuadros");
         console.log("Cuadros encontrados:", cuadros.length);
 
         cuadros.forEach((cuadro, i) => {
-            // aseguramos que no tenga la clase antes
             cuadro.classList.remove("movimiento");
-
-            // forzamos reflow para resetear animación (opcional pero útil)
             void cuadro.offsetWidth;
-
-            // agregamos la clase en el siguiente frame con delay escalonado
             setTimeout(() => {
                 cuadro.classList.add("movimiento");
-            }, i * 80 + 20); // 80ms por card, +20ms offset
+            }, i * 80 + 20);
         });
     });
 }
 
 // inicialización
 document.addEventListener('DOMContentLoaded', () => {
-    // render inicial
     patitosARenderizar(listaPatitos);
-
-    // animar el primer render (opcional)
-    applyFilter('Todo'); // llama al filtro para que también haga la animación en la carga
-
-    // construir select
+    applyFilter('Todo'); 
     const filterSelect = document.getElementById("filter");
     const categorias = [... new Set(listaPatitos.map(patito => patito.categoria))];
     categorias.unshift('Todo');

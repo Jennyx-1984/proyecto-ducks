@@ -60,7 +60,7 @@ duckStock.textContent = `Stock: ${patitoActual.stock}`;
 
 // Inicializar cantidad
 let cartItems = JSON.parse(localStorage.getItem("cartItems")) || {};
-amount.textContent = 1; // siempre iniciar en 1
+amount.textContent = 1;
 
 // + / - contador
 document.getElementById("botonIncrementar")?.addEventListener("click", () => {
@@ -96,9 +96,7 @@ botonComprar?.addEventListener("click", () => {
     localStorage.setItem("cartCount", totalCount);
 
     // Actualizar botón flotante
-    addToCart(0, 0); // solo refresca UI sin cambiar cantidades
-
-    //alert(`${cantidad} patito(s) añadido(s) al carrito`);
+    addToCart(0, 0);
 
     // Resetear cantidad visible
     amount.textContent = 1;
